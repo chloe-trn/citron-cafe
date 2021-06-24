@@ -1,0 +1,108 @@
+.gallery-container{
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+}
+.gallery-container h2{
+    font-size: 1em;
+    margin: 0 auto;
+    color:var(--green);
+    margin-top: 100px;
+    font-family: Muli-Regular; 
+    cursor:pointer;
+    transition: 0.3s ease-in;
+}
+.gallery-container h2:hover{
+    font-size: 1.015em;
+    text-decoration: underline;
+}
+.img1{grid-area: img1;}
+.img2{grid-area: img2;}
+.img3{grid-area: img3;}
+.img4{grid-area: img4;}
+.img5{grid-area: img5;}
+.gallery{
+    margin: 40px 100px;
+    display:grid;
+    grid-template-areas: 
+        'img1 img3' 
+        'img2 img3'
+        'img4 img5';
+    grid-template-columns: 50% 50%;
+    grid-gap: 12px;
+}
+.gallery-img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.post{
+    position:relative;
+}
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    background: white;
+    height: 100%;
+    width: 100%;
+    transition: .5s ease;
+}
+.insta-logo{
+    width: 70px;
+    cursor: pointer;
+}
+.post:hover > .wrapper:hover{ 
+    opacity:0.6;
+}
+#gallery-copyright{
+    font-family: Muli-Regular; 
+    margin-top: 50px;
+    padding-bottom: 50px;
+    font-size: 0.8em;
+    text-align: center;
+    color: var(--green);
+}
+@media (max-width: 1200px) {
+    .gallery{
+        margin: 40px 100px;
+    }
+}
+@media (max-width: 992px) {
+    .gallery{
+        margin: 40px 50px;
+    }
+}
+@media (max-width: 768px) {
+    .gallery{
+        margin: 20px 20px;
+        grid-gap: 5px;
+    }
+    .gallery-container h2{
+        font-size: 0.9em;
+        margin-top: 20px;
+    }
+    #gallery-copyright{
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+@media (max-width: 576px) {
+    .gallery{
+        margin: 20px 0px;
+        grid-gap: 0;
+    }
+    #gallery-copyright{
+        margin-top: 0;
+        padding-bottom: 10px;
+        font-size: 0.6em;
+    }
+
+}

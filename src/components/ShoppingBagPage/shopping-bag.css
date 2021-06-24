@@ -1,0 +1,334 @@
+.bag-outer-container{
+    padding-top: 30px;
+}
+#menu-btn{
+    margin-top: 70px;
+    margin-left: 120px;
+}
+.bag-submit{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin:0 120px;
+    background: rgba(218, 182, 210, 0.12);
+}
+.bag-not-empty{
+    padding: 0 60px 25px 60px;
+}
+.bag-empty{
+    padding: 0 60px 60px 60px;
+}
+.bag-total{
+    text-align: right;
+    margin: 50px 25px 0 25px;
+}
+#total-label{
+    display:inline;
+    margin-right: 70px;
+    font-size: 1.4em;
+    font-family: Muli-Regular; 
+}
+.total-price{
+    font-size: 1.4em;
+    font-weight: bold;
+    font-family: Muli-Regular; 
+}
+.check-out{
+    width: 150px;
+    height: 35px;
+    font-size: 1em;
+}
+.check-out{
+    position: absolute;
+    right:0; 
+    cursor: pointer;
+    border: 2px solid var(--green);
+}
+.check-out:focus{
+    outline:0;
+}
+.check-out-disabled{
+    background: #cccccc;
+    border: none;
+    cursor: not-allowed;
+}
+.check-out-disabled:focus{
+    outline:none;
+}
+.clear-visible{
+    border: 2px solid var(--green);
+    width: 150px;
+    height: 35px;
+    font-size: 1em;
+}
+.clear-visible:focus{
+    outline:0;
+}
+.buttons{
+    margin-top: 40px;
+    width: 100%;
+    position:relative;
+}
+.bag-buttons{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px 20px;
+    align-items: center;
+}
+.bag-button{
+    width: 150px;
+    height: 35px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 1px 5px #d8d0d0;
+}
+#check-out-btn{
+    background: var(--green);
+    color: var(--cream);
+}
+#delete-btn, #check-out-btn:hover{
+    background: transparent;
+    color: var(--green);
+    border: 2px solid var(--green);
+}
+#delete-btn:hover{
+    background: var(--green);
+    color: var(--cream);
+}
+.bag-container{
+    margin: 0 120px 0 120px;
+    line-height: 4;
+    background: rgba(218, 182, 210, 0.12);
+    padding: 30px 60px 0 60px;
+}
+.bag-headings{
+    display:flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    color: var(--green); 
+    font-family: Muli-Regular;  
+}
+.bag-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.delete-container{
+    width: 15%;
+    display: flex; 
+    justify-content: flex-end;
+}
+.delete-item{
+    transform: scale(0.32);
+    cursor: pointer;
+    transition: 0.25s ease-out;
+}
+.delete-item:hover{
+    transform: scale(0.42);
+}
+.item-info span{
+    display:none;
+}
+.item-info{
+    justify-items: center;
+    align-items: center;
+}
+.item-info, .item-info-headings{
+    width: 85%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.bag-unit-price, .bag-quantity, .bag-subtotal, .bag-h2{
+    text-align: center;
+}
+.item-h2{
+    text-align: left;
+}
+.bag-item-name{
+    justify-self: start;
+}
+.quan-picker{
+    width: 50px;
+    padding: 2px 5px 2px 7px;
+    border: none;
+    height: 25px; 
+    box-shadow: 0px 1px 2px #d8d0d0;
+}
+.quan-picker:focus{
+    border: 1px solid var(--green);
+}
+.mobile-h2{
+    display:none;
+}
+
+@media (max-width: 1200px) {
+    .bag-container{
+        margin: 0 50px 0 50px;
+        padding: 30px 20px 0 20px;
+    }
+    .bag-submit{
+        margin:0 50px;
+    }
+    #menu-btn{
+        margin-left: 50px;
+    }
+}
+@media (max-width: 992px) {
+    .bag-container{
+        margin: 0 10px 0 10px;
+    }
+    .bag-submit{
+        margin:0 10px;
+    }
+    #menu-btn{
+        margin-left: 10px;
+    }
+    #total-label {
+        font-size: 1.4em;
+    }
+    .total-price {
+        font-size: 1.25em;
+    }
+    .clear-visible {
+        width: 120px;
+        height: 30px;
+        font-size: 0.9em;
+    }
+    .check-out {
+        width: 120px;
+        height: 30px;
+        font-size: 0.9em;
+    }
+    .bag-container {
+        font-size: 0.81em;
+    }
+    .quan-num p::after{
+        top: 12px; 
+        height: 25px; 
+        width: 25px;
+    }
+    .quan-num img {
+        margin: 0 25px;
+    }
+    .bag-total {
+        margin: 50px 20px 0 20px;
+    }
+    .bag-buttons {
+        padding: 0 20px 20px;
+    }
+}
+@media (max-width: 768px) {
+    .mobile-h2{
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 1.2em;
+    }
+    .bag-headings{
+        display: none;
+    }
+    .delete-container{
+        position: relative;
+        width: 20%;
+    }
+    .delete-item{
+        position:absolute;
+        top: 50%; 
+        left: 15%; 
+        transform: scale(0.65) translateY(-50%);                 
+    }
+    .delete-item:hover{
+        transform: scale(0.75) translateY(-50%);
+    }
+    .bag-item{
+        border-bottom: 1px solid #c4c4c4;
+        flex-direction: row-reverse;
+    }
+    .bag-item-name, .bag-unit-price, .bag-quantity, .bag-subtotal{
+        text-align: left;
+        font-size: 15px;
+    }
+    .item-info{
+        width: 80%;
+        grid-template-columns: 1.5fr 1fr;
+    }
+    .item-info span{
+        display: inline;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+    .quan-picker{
+        height: 26px;
+    }
+    .bag-total {
+        margin-top: 25px;
+    }
+    #bag-copyright{
+        margin: 50px 0 30px 0;
+    }
+    .item-info {
+        justify-items: start;
+        align-items: center;
+    }
+    .bag-button {
+        width: 120px;
+        height: 30px;
+        font-size: 1em;
+        border: none;
+    }
+}
+@media (max-width: 576px) {
+    .bag-container{
+        margin: 0;
+        padding: 20px 0;
+    }
+    .bag-submit{
+        margin:0;
+    }
+    .delete-container{
+        width: 20%;
+        position: relative;
+    }
+    .delete-item{
+        position: absolute;
+        left: 25%; 
+        top: 50%; 
+        transform: scale(0.55) translateY(-50%);        
+    }
+    .delete-item:hover{
+        transform: scale(0.66) translateY(-50%);  
+    }
+    .bag-item-name, .bag-unit-price, .bag-quantity, .bag-subtotal{
+        text-align: left;
+        font-size: 15px;
+    }
+    .item-info{
+        width: 80%;
+        grid-template-columns: 1fr;
+    }
+    .quan-picker{
+        height: 26px;
+    }
+    .bag-submit {
+        align-items: center;
+    }
+    .bag-total {
+        margin-top: 0;
+        text-align: center;
+    }
+}
+@media (max-width: 280px) {
+    .check-out, .clear-visible {
+        width: 100px;
+        font-size: 0.8em;
+    }
+    .delete-container{
+        width: 25%;
+        position: relative;
+    }
+    .item-info{
+        width: 75%;
+        grid-template-columns: 1fr;
+    }
+}

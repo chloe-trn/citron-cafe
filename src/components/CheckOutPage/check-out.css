@@ -1,0 +1,139 @@
+.StripeElement--webkit-autofill {
+	background: transparent !important;
+}
+.StripeElement, form input{
+    width: 100%;
+    padding: 11px 5px;
+    background-color: white;
+    border:none;
+    margin: 5px 0 10px 0;
+    box-shadow: 0px 1px 2px #d8d0d0;
+}
+.check-out-container{
+    display: flex; 
+    margin: 60px 17vw;
+}
+#form{
+    display: grid;
+    grid-template-columns: 0.7fr 0.5fr;
+    grid-column-gap: 60px;
+    width: 100%;
+}
+#form h2 {
+    font-size: 1.3em;
+    font-weight: 400;
+    color: var(--green);
+    margin-top: 15px;
+    margin-bottom: 17px;
+    font-family: Muli-Regular;
+}
+#form label {
+    font-size: .85em;
+    margin: 17px 0 8px;
+}
+.summary{
+    background: var(--green);
+    color: var(--cream);
+    padding: 45px 40px;
+    width: 100%;
+    margin-top: 65px;
+    box-shadow: 1px 5px #d8d0d0;
+}
+.summary-table{
+    width: 100%;
+}
+.summary-table td{
+    padding: 5px 0;
+    font-size: 1.05em;
+}
+#summary-heading{
+    text-align: center;
+    color: var(--cream) !important;
+    margin-top: 0 !important;
+}
+.col-two{
+    text-align: right;
+}
+.summary button{
+    width: 100%;
+    margin-top: 15px;
+    border: 2px solid var(--cream);
+    font-size: 1em;
+    height: 35px;
+    background: transparent;
+    color: var(--cream);
+    cursor: pointer;
+    transition: 0.1s linear;
+}
+.summary button:hover{
+    background: var(--cream);
+    color: var(--green);
+}
+.checkout-info{
+    font-size: 1em;
+    margin: 45px 0 30px 0;
+    line-height: 1.7;
+}
+.testing-label{
+    display: inline-block;
+    margin-bottom: 7px;
+}
+/* Media Queries */
+@media (max-width: 1200px) {
+    .check-out-container{
+        margin: 60px 10vw;
+    }
+}
+@media (max-width: 992px) {
+    .check-out-container{
+        margin: 60px 15vw;
+    }
+    #form{
+        display:flex;
+        flex-direction: column;
+    }
+    .right{
+        position: relative;
+    }
+    .summary{
+        padding: 45px 40px;
+        width: 100%;
+        margin-top: 50px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+}
+@media (max-width: 853px) {
+    .check-out-container{
+        margin: 60px 8vw;
+    }
+}
+@media (max-width: 768px) {
+    .summary-table td{
+        padding: 3px 0;
+        font-size: 0.9em;
+    }
+    .summary{
+        margin-top: 40px;
+    }
+    #form h2 {
+        font-size: 1.2em;
+    }
+}
+@media (max-width: 576px) {
+    .check-out-container{
+        margin: 60px 5vw;
+    }
+    #form h2{
+        font-size: 1.1em;
+    }
+    .checkout-info{
+        font-size: 0.9em;
+        margin: 40px 0;
+    }
+    
+}
+
+

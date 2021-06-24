@@ -1,0 +1,278 @@
+.menu-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2;
+    padding: 0 200px;
+}
+.menu-h2{
+    margin-top: 60px;
+    font-family: Muli-Regular; 
+}
+.menu-h3{
+    font-family: Muli-Regular; 
+    margin-top: 10px;
+}
+.menu-p{
+    margin: 10px 0 20px 0;
+}
+.menu{
+    background: rgba(218, 182, 210, 0.12);
+    width: 100%;
+    padding: 35px; 
+    position:relative;
+}
+.line{
+    width: 100%;
+    height: 1px; 
+    background: #c4c4c4;
+    margin-bottom: 20px;
+}
+.menu-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.left-side,.right-side{
+    display: flex;
+    flex-direction: column;
+}
+.menu-item{
+    display: flex;
+    margin: 15px 0; 
+}
+.item{
+    border:none;
+    background: transparent;
+    font-size: 0.95em;
+    transition: 0.1s linear;
+}
+.item:hover{
+    font-size: 0.96em;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+.item:focus{
+    outline:0;
+}
+.add-item-visible{
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+.add-item-hidden{
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+.add-item-visible img{
+    transform: scale(0.6);
+    cursor:pointer;
+    position: relative;
+    z-index: 1;
+}
+.add-item-visible p{
+    margin: 0 10px;
+}
+.add-item-btn{
+    width: 60px;
+    height: 26px;
+    margin-left: 6px;
+    border: 1px solid var(--green);
+    background: var(--green);
+    color: var(--cream);
+    box-shadow: 0px 1px 2px #d8d0d0;
+    cursor: pointer;
+}
+.add-item-btn:hover{
+    background: var(--cream);
+    color: var(--green);
+}
+.pop-ups{
+    position:relative;
+}
+.menu-picker:focus{
+    border: 1px solid var(--green);
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+   opacity: 1;
+   cursor: pointer;
+}
+.item-added{
+    position:absolute;
+    bottom: 50%;
+    left: 20px;
+    background: #BBB4B4;
+    width: 85px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(50%);
+    opacity: 0;
+}
+.item-added p{
+    font-size: 0.7em;
+    color: #F7EDE6;
+}
+.item-added-animation {
+    animation-name: email-animation;
+    animation-duration: 2.05s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+@keyframes item-added-animation {
+    0%   {opacity: 0;}
+    15%  {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+#bag-btn{
+    position: absolute;
+    right: 35px;
+}
+.pastries h3{
+    margin-top: 50px;
+}
+.menu-quan-num{
+    position: relative;
+    font-size: 0.85em;
+    z-index: 1;
+}
+@media (max-width: 1200px) {
+    .menu-container{
+        padding: 0 60px;
+    }
+    .menu-h2{
+        font-size: 1.1em;
+    }
+    .menu{
+        padding: 20px 50px; 
+    }
+    .back{
+        right: 50px; 
+    }
+    .menu-grid{
+        grid-template-columns: 1.5fr 1.2fr;
+    }
+    .item{
+        font-size:0.9em;
+    }
+    .add-item input{
+        width: 80px;
+        height: 25px;
+    }
+    .add-item{
+        margin-left: 55px;
+    }
+    #bag-btn{
+        right: 50px;
+    }
+}
+@media (max-width: 992px) {
+    .menu-container{
+        padding: 0 50px;
+    }
+    .menu-h2{
+        margin-top: 60px;
+        font-size: 1.5em;
+    }
+    .menu{
+        padding: 20px 70px 50px 70px; 
+    }
+    .back{
+        right: 70px; 
+    }
+    .menu-grid{
+        grid-template-columns: 1fr;
+    }
+    .item{
+        font-size: 1em;
+    }
+    #bag-btn{
+        right: 70px;
+    }
+}
+@media (max-width: 768px) {
+    .menu-container{
+        padding: 0;
+    }
+    .menu-h2{
+        margin-top: 20px;
+        font-size: 1.15em;
+    }
+    .menu-h3{
+        font-size: 1.1em;
+    }
+    .menu-p{
+        font-size: 0.9em;
+        margin: 10px 0 30px 0;
+    }
+    .menu{
+        padding: 20px 40px 50px 40px; 
+    }
+    .back{
+        right: 40px; 
+    }
+    .menu-grid{
+        grid-template-columns: 1fr;
+    }
+    .item{
+        font-size: 0.9em;
+    }
+    #copyright{
+        text-align: right;
+        margin: 70px 20px 50px 0;
+        color: var(--green);
+    }
+    #bag-btn{
+        right: 40px;
+    }
+    
+}
+@media (max-width: 460px) {
+    .menu-h2{
+        font-size: 1.1em;
+    }
+    .menu-h3{
+        font-size: 1em;
+        text-align: center;
+    }
+    .pastries h3 {
+        margin-top: 80px;
+    }
+    .line {
+        margin-bottom: 40px;
+    }
+    .menu-item {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .item{
+        font-size: 0.92em;
+    }
+    .pop-ups {
+        margin: 20px 0 30px 0;
+    }
+    .add-item-visible{
+        margin-left: 0;
+    }
+    .item-added {
+        bottom: 50%;
+        left: 50%;
+        height: 24px;
+        transform: translate(-50%, 50%);
+    }
+    .add-item-btn {
+        margin-left: 12px;
+    }
+    .menu-quan-picker{
+        margin-right: 12px;
+    }
+   
+}
