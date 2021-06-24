@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/citron-frontend/static/css/main.1d30b778.chunk.css",
+    "main.js": "/citron-frontend/static/js/main.32f7e169.chunk.js",
+    "main.js.map": "/citron-frontend/static/js/main.32f7e169.chunk.js.map",
+    "runtime-main.js": "/citron-frontend/static/js/runtime-main.066106ca.js",
+    "runtime-main.js.map": "/citron-frontend/static/js/runtime-main.066106ca.js.map",
+    "static/css/2.4abdb7b1.chunk.css": "/citron-frontend/static/css/2.4abdb7b1.chunk.css",
+    "static/js/2.82193c4b.chunk.js": "/citron-frontend/static/js/2.82193c4b.chunk.js",
+    "static/js/2.82193c4b.chunk.js.map": "/citron-frontend/static/js/2.82193c4b.chunk.js.map",
+    "index.html": "/citron-frontend/index.html",
+    "static/css/2.4abdb7b1.chunk.css.map": "/citron-frontend/static/css/2.4abdb7b1.chunk.css.map",
+    "static/css/main.1d30b778.chunk.css.map": "/citron-frontend/static/css/main.1d30b778.chunk.css.map",
+    "static/js/2.82193c4b.chunk.js.LICENSE.txt": "/citron-frontend/static/js/2.82193c4b.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/citron-frontend/static/media/Muli-Regular.9249d093.ttf",
+    "static/media/cross.909caee5.svg": "/citron-frontend/static/media/cross.909caee5.svg",
+    "static/media/img1.202116a9.jpg": "/citron-frontend/static/media/img1.202116a9.jpg",
+    "static/media/img1.48c037a6.jpg": "/citron-frontend/static/media/img1.48c037a6.jpg",
+    "static/media/img2.4bf02f0d.jpg": "/citron-frontend/static/media/img2.4bf02f0d.jpg",
+    "static/media/img2.9564ed24.jpg": "/citron-frontend/static/media/img2.9564ed24.jpg",
+    "static/media/img3.04c333e5.jpg": "/citron-frontend/static/media/img3.04c333e5.jpg",
+    "static/media/img3.6caa5846.jpg": "/citron-frontend/static/media/img3.6caa5846.jpg",
+    "static/media/img4.4a5c9095.jpg": "/citron-frontend/static/media/img4.4a5c9095.jpg",
+    "static/media/img4.794384a3.jpg": "/citron-frontend/static/media/img4.794384a3.jpg",
+    "static/media/img5.67c464f1.jpg": "/citron-frontend/static/media/img5.67c464f1.jpg",
+    "static/media/img5.9b636e2f.jpg": "/citron-frontend/static/media/img5.9b636e2f.jpg",
+    "static/media/img6.356ce378.jpg": "/citron-frontend/static/media/img6.356ce378.jpg",
+    "static/media/instagram.83da4327.svg": "/citron-frontend/static/media/instagram.83da4327.svg",
+    "static/media/shopping-bag.dc8fba94.svg": "/citron-frontend/static/media/shopping-bag.dc8fba94.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.066106ca.js",
+    "static/css/2.4abdb7b1.chunk.css",
+    "static/js/2.82193c4b.chunk.js",
+    "static/css/main.1d30b778.chunk.css",
+    "static/js/main.32f7e169.chunk.js"
+  ]
+}
