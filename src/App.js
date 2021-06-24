@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect, useRef } from "react"
 import { 
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch
 } from "react-router-dom"
 import './App.css'
@@ -59,6 +59,17 @@ export const BagFunctionsContext = createContext({})
 const localStorageBag = JSON.parse(localStorage.getItem('citron-bag')) || []
 
 function App() {
+
+  // Wake up Heroku
+  const [apiResponse, setApiResponse] = useState("");
+  const callAPI = () => {
+    fetch('https://citron-backend.herokuapp.com/test')
+    .then(res => res.text())
+    .then(res => setApiResponse(res));
+  }
+  useEffect(() => {
+    callAPI(); 
+  }, []);
 
   const [bag, setBag] = useState(localStorageBag)
   const [totalBagItems, setTotalBagItems] = useState(0) 

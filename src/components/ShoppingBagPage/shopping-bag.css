@@ -6,9 +6,23 @@
     margin-left: 120px;
 }
 .bag-submit{
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-moz-box;
+    display:-ms-flexbox;
     display:flex;
-    flex-direction: column;
-    align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+       -moz-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     margin:0 120px;
     background: rgba(218, 182, 210, 0.12);
 }
@@ -70,10 +84,22 @@
     position:relative;
 }
 .bag-buttons{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 0 25px 20px;
-    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .bag-button{
     width: 150px;
@@ -81,7 +107,9 @@
     font-size: 1em;
     border: none;
     cursor: pointer;
-    box-shadow: 0px 1px 5px #d8d0d0;
+    -webkit-box-shadow: 0px 1px 5px #d8d0d0;
+       -moz-box-shadow: 0px 1px 5px #d8d0d0;
+            box-shadow: 0px 1px 5px #d8d0d0;
 }
 #check-out-btn{
     background: var(--green);
@@ -103,40 +131,81 @@
     padding: 30px 60px 0 60px;
 }
 .bag-headings{
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-moz-box;
+    display:-ms-flexbox;
     display:flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     font-size: 0.8em;
     color: var(--green); 
     font-family: Muli-Regular;  
 }
 .bag-item{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 10px 0;
 }
 .delete-container{
     width: 15%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex; 
-    justify-content: flex-end;
+    -webkit-box-pack: end; 
+    -webkit-justify-content: flex-end; 
+       -moz-box-pack: end; 
+        -ms-flex-pack: end; 
+            justify-content: flex-end;
 }
 .delete-item{
-    transform: scale(0.32);
+    -webkit-transform: scale(0.32);
+       -moz-transform: scale(0.32);
+        -ms-transform: scale(0.32);
+         -o-transform: scale(0.32);
+            transform: scale(0.32);
     cursor: pointer;
+    -webkit-transition: 0.25s ease-out;
+    -o-transition: 0.25s ease-out;
+    -moz-transition: 0.25s ease-out;
     transition: 0.25s ease-out;
 }
 .delete-item:hover{
-    transform: scale(0.42);
+    -webkit-transform: scale(0.42);
+       -moz-transform: scale(0.42);
+        -ms-transform: scale(0.42);
+         -o-transform: scale(0.42);
+            transform: scale(0.42);
 }
 .item-info span{
     display:none;
 }
 .item-info{
     justify-items: center;
-    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .item-info, .item-info-headings{
     width: 85%;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .bag-unit-price, .bag-quantity, .bag-subtotal, .bag-h2{
@@ -146,14 +215,17 @@
     text-align: left;
 }
 .bag-item-name{
-    justify-self: start;
+    -ms-grid-column-align: start;
+        justify-self: start;
 }
 .quan-picker{
     width: 50px;
     padding: 2px 5px 2px 7px;
     border: none;
     height: 25px; 
-    box-shadow: 0px 1px 2px #d8d0d0;
+    -webkit-box-shadow: 0px 1px 2px #d8d0d0; 
+       -moz-box-shadow: 0px 1px 2px #d8d0d0; 
+            box-shadow: 0px 1px 2px #d8d0d0;
 }
 .quan-picker:focus{
     border: 1px solid var(--green);
@@ -236,14 +308,28 @@
         position:absolute;
         top: 50%; 
         left: 15%; 
-        transform: scale(0.65) translateY(-50%);                 
+        -webkit-transform: scale(0.65) translateY(-50%); 
+           -moz-transform: scale(0.65) translateY(-50%); 
+            -ms-transform: scale(0.65) translateY(-50%); 
+             -o-transform: scale(0.65) translateY(-50%); 
+                transform: scale(0.65) translateY(-50%);                 
     }
     .delete-item:hover{
-        transform: scale(0.75) translateY(-50%);
+        -webkit-transform: scale(0.75) translateY(-50%);
+           -moz-transform: scale(0.75) translateY(-50%);
+            -ms-transform: scale(0.75) translateY(-50%);
+             -o-transform: scale(0.75) translateY(-50%);
+                transform: scale(0.75) translateY(-50%);
     }
     .bag-item{
         border-bottom: 1px solid #c4c4c4;
-        flex-direction: row-reverse;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -webkit-flex-direction: row-reverse;
+           -moz-box-orient: horizontal;
+           -moz-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
     }
     .bag-item-name, .bag-unit-price, .bag-quantity, .bag-subtotal{
         text-align: left;
@@ -251,6 +337,7 @@
     }
     .item-info{
         width: 80%;
+        -ms-grid-columns: 1.5fr 1fr;
         grid-template-columns: 1.5fr 1fr;
     }
     .item-info span{
@@ -269,7 +356,11 @@
     }
     .item-info {
         justify-items: start;
-        align-items: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .bag-button {
         width: 120px;
@@ -294,10 +385,18 @@
         position: absolute;
         left: 25%; 
         top: 50%; 
-        transform: scale(0.55) translateY(-50%);        
+        -webkit-transform: scale(0.55) translateY(-50%); 
+           -moz-transform: scale(0.55) translateY(-50%); 
+            -ms-transform: scale(0.55) translateY(-50%); 
+             -o-transform: scale(0.55) translateY(-50%); 
+                transform: scale(0.55) translateY(-50%);        
     }
     .delete-item:hover{
-        transform: scale(0.66) translateY(-50%);  
+        -webkit-transform: scale(0.66) translateY(-50%);
+           -moz-transform: scale(0.66) translateY(-50%);
+            -ms-transform: scale(0.66) translateY(-50%);
+             -o-transform: scale(0.66) translateY(-50%);
+                transform: scale(0.66) translateY(-50%);  
     }
     .bag-item-name, .bag-unit-price, .bag-quantity, .bag-subtotal{
         text-align: left;
@@ -305,13 +404,18 @@
     }
     .item-info{
         width: 80%;
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
     .quan-picker{
         height: 26px;
     }
     .bag-submit {
-        align-items: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .bag-total {
         margin-top: 0;
@@ -329,6 +433,7 @@
     }
     .item-info{
         width: 75%;
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
 }

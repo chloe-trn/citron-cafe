@@ -7,14 +7,22 @@
     background-color: white;
     border:none;
     margin: 5px 0 10px 0;
-    box-shadow: 0px 1px 2px #d8d0d0;
+    -webkit-box-shadow: 0px 1px 2px #d8d0d0;
+       -moz-box-shadow: 0px 1px 2px #d8d0d0;
+            box-shadow: 0px 1px 2px #d8d0d0;
 }
 .check-out-container{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex; 
     margin: 60px 17vw;
 }
 #form{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 0.7fr 60px 0.5fr;
     grid-template-columns: 0.7fr 0.5fr;
     grid-column-gap: 60px;
     width: 100%;
@@ -37,7 +45,9 @@
     padding: 45px 40px;
     width: 100%;
     margin-top: 65px;
-    box-shadow: 1px 5px #d8d0d0;
+    -webkit-box-shadow: 1px 5px #d8d0d0;
+       -moz-box-shadow: 1px 5px #d8d0d0;
+            box-shadow: 1px 5px #d8d0d0;
 }
 .summary-table{
     width: 100%;
@@ -63,6 +73,9 @@
     background: transparent;
     color: var(--cream);
     cursor: pointer;
+    -webkit-transition: 0.1s linear;
+    -o-transition: 0.1s linear;
+    -moz-transition: 0.1s linear;
     transition: 0.1s linear;
 }
 .summary button:hover{
@@ -89,8 +102,18 @@
         margin: 60px 15vw;
     }
     #form{
+        display:-webkit-box;
+        display:-webkit-flex;
+        display:-moz-box;
+        display:-ms-flexbox;
         display:flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .right{
         position: relative;
@@ -101,7 +124,11 @@
         margin-top: 50px;
         position: relative;
         left: 50%;
-        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+           -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+             -o-transform: translateX(-50%);
+                transform: translateX(-50%);
     }
 
 }
@@ -135,5 +162,4 @@
     }
     
 }
-
 

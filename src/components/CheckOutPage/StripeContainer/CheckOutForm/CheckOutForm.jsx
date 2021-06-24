@@ -17,15 +17,29 @@ function CheckOutForm() {
 
     // verify card payment with Stripe.js through an axios API call through Node server on form submit 
     const handleSubmit = async (e) => {
+        // prevent page refresh
         e.preventDefault()
+
+        if (!stripe || !elements) {
+            // Stripe.js has not loaded yet. Make sure to disable
+            // form submission until Stripe.js has loaded.
+            return;
+        }
+
+         // Get a reference to a mounted CardElement. Elements knows how
+        // to find your CardElement because there can only ever be one of
+        // each type of element.
+        const cardElement = elements.getElement(CardElement);
+
+        // Use your card Element with other Stripe.js APIs
         const {error, paymentMethod} = await stripe.createPaymentMethod({
-            type: "card",
-            card: elements.getElement(CardElement)
-        })
+            type: 'card',
+            card: cardElement,
+        });
         if(!error) {
             try {
                 const {id} = paymentMethod
-                const response = await axios.post("/order-confirmed", {
+                const response = await axios.post("https://citron-backend.herokuapp.com/order-confirmed", {
                     message: 'Stripe Payment Method Successfully Created',
                     id: id
                 })
@@ -38,6 +52,7 @@ function CheckOutForm() {
         } else {
             console.log("There is a client side error",error.message)
         }
+    
     }
 
     return (
