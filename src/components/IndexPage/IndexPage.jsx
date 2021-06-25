@@ -18,12 +18,12 @@ function IndexPage(props){
     const images = [image1,image2,image3,image4,image5,image1]
     
     return(
-        <div>
+        <>
            <Hero images={images}/>
            <SubHero img={image6}/>
            <Info />
            <Footer />
-        </div>
+        </>
     )
 }
 

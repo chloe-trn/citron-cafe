@@ -1,7 +1,7 @@
 <h1 align="center">Citron Café</h1>
 <h2 align="center"><a  href="#"  target="_blank">Live Demo</a></h2>
 
-![Screenshot](./read-me/Citron-Cafe.pmg)
+![Screenshot](./read-me/Citron-Cafe.png)
 
 <p align="center"> A responsive website for a replica cafe.</p>
 
