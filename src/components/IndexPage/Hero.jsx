@@ -13,7 +13,7 @@ function Hero(props) {
             infiniteLoop={true}
             useKeyboardArrows={true}
             autoPlay={true}
-            interval={3500}
+            interval={4500}
             showStatus={false}
             showThumbs={false}
         >

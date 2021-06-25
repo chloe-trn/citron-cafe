@@ -101,13 +101,8 @@
 .post:hover > .wrapper:hover{ 
     opacity:0.6;
 }
-#gallery-copyright{
-    font-family: Muli-Regular; 
-    margin-top: 50px;
-    padding-bottom: 50px;
-    font-size: 0.8em;
-    text-align: center;
-    color: var(--green);
+.lazy-load-image-background.opacity.lazy-load-image-loaded {
+    height: 100%;
 }
 @media (max-width: 1200px) {
     .gallery{

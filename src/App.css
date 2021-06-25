@@ -374,6 +374,9 @@ a.nav-link:visited{
     background: var(--accent-green);
     padding: 5px 10px;
     cursor: pointer;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
   }
   .hamburger-line{
     background: var(--black);
@@ -383,6 +386,10 @@ a.nav-link:visited{
     -webkit-border-radius: 2px;
        -moz-border-radius: 2px;
             border-radius: 2px;
+  }
+  #copyright{
+    margin: 20px 20px 20px 0;
+    padding: 0;
   }
 }
 @media screen and (max-width: 576px){
@@ -401,9 +408,6 @@ a.nav-link:visited{
   }
   .hamburger{
     padding: 6px 7px;
-    -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-            border-radius: 5px;
   }
   .hamburger-line{
     height: 2px;
