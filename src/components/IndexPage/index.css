@@ -120,20 +120,24 @@
     margin-bottom: 5px;
     line-height: 2.5;
 }
-/* Newsletter/ Footer */
-footer{
+/* Newsletter/ #newsletter */
+#newsletter{
     width: 100%;
     color: var(--cream);
     background: var(--green);
     padding:80px var(--nav-padding) 40px var(--nav-padding);
     line-height: 2;
 }
-footer h2{
+#newsletter label {
+    position: absolute;
+    visibility: hidden;
+}
+#newsletter h2{
     font-weight: normal;
     font-size: 1.2em;
     font-family: Muli-Regular; 
 }
-footer p{
+#newsletter p{
     font-size: 0.9em;
     margin-bottom: 45px;
 }
@@ -219,11 +223,12 @@ footer p{
     100% {opacity: 0;}
 }
 #index-copyright{
-    margin-top: 70px;
     text-align: right;
-    margin-bottom: 0;
     font-family: Muli-Regular; 
     font-size: 0.8em;
+    padding: 0 var(--nav-padding) 40px var(--nav-padding);
+    background-color: var(--green);
+    color: var(--cream);
 }
 .hero p, #sub-one, #sub-two{
     display: inline-block;
@@ -235,16 +240,16 @@ footer p{
     .cell h2 {
         font-size: 1em;
     }
-    .cell p, footer p, #submit, #email{
+    .cell p, #newsletter p, #submit, #email{
         font-size: 0.85em;
     }
-    footer h2 {
+    #newsletter h2 {
         font-size: 1.1em;
     }
     .info {
         margin: 50px var(--nav-padding);
     }
-    footer{
+    #newsletter{
         padding: 70px 50px 40px 50px;
     }
 }
@@ -280,18 +285,21 @@ footer p{
         top: 65%;
         font-size: 0.8em;
     }
-    .cell p, footer p, #submit, #email{
+    .cell p, #newsletter p, #submit, #email{
         font-size: 0.85em;
     }
-    footer h2 {
+    #newsletter h2 {
         font-size: 1.1em;
     }
     .index-container,.sub-hero{
         margin: 0;
     }
-    footer{
+    #newsletter{
         padding: 70px 30px 20px 30px;
         margin-top: 30px;
+    }
+    #index-copyright{
+        padding: 0 30px 20px 30px;
     }
     .info {
         height: 440px;
@@ -322,22 +330,22 @@ footer p{
         font-size: 0.7em;
         padding: 0 6px;
     }
-    .cell p, footer p, #submit, #email{
+    .cell p, #newsletter p, #submit, #email{
         font-size: 0.8em;
     }
-    footer h2 {
+    #newsletter h2 {
         font-size: 1em;
     }
     .index-container,.sub-hero{
         margin: 0;
     }
-    footer{
+    #newsletter{
         padding: 30px 30px 20px 30px;
     }
     .cell h2 {
         margin-bottom: 5px;
     }
-    footer p {
+    #newsletter p {
         margin-bottom: 25px;
     }
     #email, #submit {
@@ -345,9 +353,6 @@ footer p{
     }
     #submit{
         width: 30%; 
-    }
-    #index-copyright {
-        margin-top: 30px;
     }
 }
 @media screen and (max-width: 350px) {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef} from "react"
 
-function Footer(){
+function Newsletter(){
 
     // reflect if user has submitted an email 
     const [showEmailConfirmation, setShowEmailConfirmation] = useState(false);
@@ -44,10 +44,11 @@ function Footer(){
     }
 
     return(
-        <footer>
+        <section id="newsletter" aria-label="Sign up for Citron Cafe's newsletter">
             <h2>keep in touch.</h2>
             <p>receive our weekly newsletter to know about our menu specials and launches.</p>
             <form onSubmit={handleSubmit} >
+                <label for="email">Email</label>
                 <input 
                     type="email" 
                     id="email" 
@@ -56,6 +57,7 @@ function Footer(){
                     disabled={showEmailConfirmation}
                     required
                 />
+                <label for="submit">Submit</label>
                 <input 
                     type="submit" 
                     id="submit" 
@@ -67,11 +69,10 @@ function Footer(){
                     ref={emailConfirmRef}
                     className={showEmailConfirmation ? "email-animation" : ""}
                     id="email-confirmation"
+                    role="status"
                     >Your email has been received. Thanks for joining!
                 </p> 
-
-            <p id="index-copyright">Citron Café 2020</p>
-        </footer>
+        </section>
     )
 }
-export default Footer
+export default Newsletter

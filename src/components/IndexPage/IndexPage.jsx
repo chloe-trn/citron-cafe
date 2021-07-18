@@ -2,7 +2,7 @@ import React from "react"
 import "./index.css"
 import SubHero from "./SubHero"
 import Info from "./Info"
-import Footer from "./Footer"
+import Newsletter from "./Newsletter"
 import Hero from "./Hero"
 
 // import hero slider images 
@@ -19,10 +19,13 @@ function IndexPage(props){
     
     return(
         <>
+        <main>
            <Hero images={images}/>
            <SubHero img={image6}/>
            <Info />
-           <Footer />
+           <Newsletter />
+        </main>
+        <footer id="index-copyright">Citron Café 2020</footer>
         </>
     )
 }

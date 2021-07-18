@@ -38,16 +38,10 @@ function NavBar({bagNum, widthRef}){
         return () => window.removeEventListener('resize', windowResize)
     },[widthRef])
 
-    // useEffect(() => {
-    //     if(pathname === 'check-out'){
-    //         setNavStyle({visibility:"hidden"})
-    //     }
-    // },[])
-
     const handleWindowResize = () => widthRef.current =navRef.current.clientWidth
 
     return(
-        <>
+        <header>
         {
             normalNavPaths.includes(pathname) ?
             <>
@@ -80,7 +74,7 @@ function NavBar({bagNum, widthRef}){
                 </Link> 
             </nav>
         }
-        </>
+        </header>
     )
 }
 
