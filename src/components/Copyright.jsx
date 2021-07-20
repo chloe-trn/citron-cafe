@@ -1,5 +1,5 @@
 import React from 'react'
 
-const Copyright = () => <p id="copyright">Citron Café 2020</p>
+const Copyright = () => <footer id="copyright">Citron Café 2020</footer>
 
 export default Copyright

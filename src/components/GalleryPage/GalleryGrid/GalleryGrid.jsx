@@ -11,12 +11,12 @@ function GalleryGrid({images, instaLogo}){
         alert("Clicking here would lead to Citron Cafe's instagram page. This is a test site so no instagram account is available.");
     }
     return(
-        <div className="gallery-container">
+        <main className="gallery-container">
             <h2 onClick={handleInstaHandleClick}>@citron-cafe.co</h2>
-            <div className="gallery">
+            <section className="gallery" aria-label="Selected images from Citron Café's instagram account">
                 {
                     images.map((image,index) => 
-                        <div className={"post img"+(index+1)} key={image} >
+                        <div className={"post img"+(index+1)} key={image} aria-label="Selected Citron Café instagram post">
                             <LazyLoadImage effect="opacity" className={"gallery-img img"+(index+1)} src={image} alt=""/>
                             <div className="wrapper">
                             <LazyLoadImage effect="opacity" className="insta-logo" src={instaLogo} alt="Instagram logo" onClick={handleInstaPostClick}/>
@@ -24,8 +24,8 @@ function GalleryGrid({images, instaLogo}){
                         </div>
                     )
                 }
-            </div>
-        </div>
+            </section>
+        </main>
     );
 }
 
