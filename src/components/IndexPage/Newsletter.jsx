@@ -30,15 +30,30 @@ function Newsletter(){
     const toggleEmailAnimation = () => setShowEmailConfirmation(false)
 
     // handle user email submission 
+    const [userEmail, setUserEmail] = useState({})
+    
+    const handleChange = (event) => {
+        setUserEmail({ "email": event.target.value })
+    }
+
     const handleSubmit = (e) => {
+
         // prevent page refresh 
         e.preventDefault(); 
-        // get email 
-        const emailInput = e.target[0];
-        // would send email to for server-side handling here 
-        // *************************************************
+        
+        // add email to database
+        fetch('/newsletter', {
+            method: 'POST', 
+            headers: { "Content-Type": "application/json"},
+            body: JSON.stringify(userEmail)
+        }).then((res) => {
+            console.log(res)
+        })
+
         // clear email field 
+        const emailInput = e.target[0];
         emailInput.value = "";
+
         // show confirmation to user
         setShowEmailConfirmation(true);
     }
@@ -48,16 +63,17 @@ function Newsletter(){
             <h2>keep in touch.</h2>
             <p>receive our weekly newsletter to know about our menu specials and launches.</p>
             <form onSubmit={handleSubmit} >
-                <label for="email">Email</label>
+                <label htmlFor="email">Email</label>
                 <input 
                     type="email" 
                     id="email" 
                     name="email" 
                     placeholder="your email"
                     disabled={showEmailConfirmation}
+                    onChange={handleChange}
                     required
                 />
-                <label for="submit">Submit</label>
+                <label htmlFor="submit">Submit</label>
                 <input 
                     type="submit" 
                     id="submit" 
