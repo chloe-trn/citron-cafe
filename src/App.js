@@ -12,46 +12,7 @@ import MenuPage from './components/MenuPage/MenuPage'
 import ShoppingBagPage from './components/ShoppingBagPage/ShoppingBagPage'
 import CheckOutPage from './components/CheckOutPage/CheckOutPage'
 
-// menu items data - TODO: integrate a backend database
-const pastries = {
-  "Croissant": 3.5,
-  "Vanilla Cream Bun": 5.25,
-  "Egg Tart": 5.5,
-  "Custard Bun":5.25,
-  "Macaron": 2.25, 
-  "Yuzu Swirl Roll": 9.75, 
-  "Tiramisu": 2.25, 
-  "Red Bean Mochi": 3.25,
-  "Chocolate Lava Cake": 5.25 
-}
-const coffee = {
-  "Vietnamese Drip Coffee": 4.5,
-  "Flat White": 6.25,
-  "Vanilla Latte": 4.25, 
-  "Cafe Mocha": 5,
-  "Cappuccino": 6.5, 
-  "Affogato": 8.5, 
-  "Espresso": 2.5
-}
-const tea = {
-  "Grapefruit": 2,
-  "Signature Citron": 2.5,
-  "Matcha": 2,
-  "Oolong": 2, 
-  "English Breakfast": 2, 
-  "Assam": 2, 
-  "Chai": 2, 
-  "Apricot Peach": 2, 
-  "Black Cherry": 2,
-  "Earl Grey": 2, 
-  "Thai Iced Tea": 2.5, 
-  "Raspberry Nectar": 2, 
-  "Butterfly Pea Flower": 3
-}
-const menu = [ pastries, coffee, tea]
-
 // global contexts
-export const MenuContext = createContext([])
 export const BagContext = createContext([])
 export const BagFunctionsContext = createContext({})
 
@@ -62,13 +23,20 @@ function App() {
 
   // Wake up Heroku
   const [apiResponse, setApiResponse] = useState("");
-  const callAPI = () => {
-    fetch('https://citron-backend.herokuapp.com/test')
-    .then(res => res.text())
-    .then(res => setApiResponse(res));
-  }
+
   useEffect(() => {
-    callAPI(); 
+    const fetchData = async () => {
+      // get the data from the api
+      const data = await fetch('/test');
+      // convert the data to json
+      const json = await data.json();
+      // set state with the result
+      setApiResponse(json.date);
+    }
+
+    fetchData()
+    // make sure to catch any error
+    .catch(console.error);
   }, []);
 
   const [bag, setBag] = useState(localStorageBag)
@@ -97,8 +65,8 @@ function App() {
     setBag(newBag)
   }
 
-  const handleAddItem = (bag,item,quantity,unitPrice) => {
-    const newItem = { 'item':item, 'quantity':quantity, 'unitPrice': unitPrice}
+  const handleAddItem = (bag,itemID,item,quantity,unitPrice) => {
+    const newItem = { 'itemID':itemID, 'item':item, 'quantity':quantity, 'unitPrice': unitPrice}
     const newBag = bag.slice(0)
     newBag.push(newItem)
     setBag(newBag)
@@ -125,6 +93,7 @@ function App() {
   return (
     <Router>
       <div className="App">  
+          <p>{apiResponse}</p>
           <NavBar bagNum={totalBagItems} widthRef={widthRef}/>
           <BagContext.Provider value={bag}>
           <BagFunctionsContext.Provider value={{
@@ -134,15 +103,13 @@ function App() {
               deleteItem: deleteItem,
               getTotalQuantity: getTotalQuantity
           }}>
-          <MenuContext.Provider value={menu}>
-            <Switch>
-              <MenuPage exact path="/menu" />
-              <IndexPage exact path="/" widthRef={widthRef}/>
-              <GalleryPage exact path="/gallery" />
-              <ShoppingBagPage exact path="/shopping-bag" />
-              <CheckOutPage exact path="/check-out" />
-            </Switch>
-          </MenuContext.Provider>
+          <Switch>
+            <MenuPage exact path="/menu" />
+            <IndexPage exact path="/" widthRef={widthRef}/>
+            <GalleryPage exact path="/gallery" />
+            <ShoppingBagPage exact path="/shopping-bag" />
+            <CheckOutPage exact path="/check-out" />
+          </Switch>
           </BagFunctionsContext.Provider>
           </BagContext.Provider>
       </div>

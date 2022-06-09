@@ -3,8 +3,10 @@ import MenuItem from './MenuItem/MenuItem'
 
 function MenuCategory({name,title,menu,itemClicked, handleItemClick}){
 
-    const itemKeys = Object.keys(menu)
-    const itemVals = Object.values(menu)
+    const items = Object.values(menu)
+    const itemIDs = Object.keys(menu)
+    const itemNames = items.map(a => a.name)
+    const itemPrices = items.map(a => a.price)
 
     // use menu data and map them to the DOM programmatically
     return(
@@ -14,12 +16,13 @@ function MenuCategory({name,title,menu,itemClicked, handleItemClick}){
                 <div className="menu-grid" id={name+"-container"}>
                     <div className="left-side">
                         {
-                            itemKeys.map((item,index) => 
+                            itemNames.map((item,index) => 
                             (index % 2 === 0)?
                             <MenuItem 
                                 key={item + index} 
+                                itemID ={itemIDs[index]}
                                 item={item} 
-                                unitPrice={itemVals[index]}
+                                unitPrice={itemPrices[index]}
                                 itemClicked={itemClicked}
                                 handleItemClick={handleItemClick}  
                             />:
@@ -29,12 +32,13 @@ function MenuCategory({name,title,menu,itemClicked, handleItemClick}){
                     </div>
                     <div className="right-side">
                         {
-                            itemKeys.map((item,index) => 
+                            itemNames.map((item,index) => 
                             (index % 2 !== 0)?
                             <MenuItem 
                                 key={item + index} 
+                                itemID ={itemIDs[index]}
                                 item={item} 
-                                unitPrice={itemVals[index]}
+                                unitPrice={itemPrices[index]}
                                 itemClicked={itemClicked}
                                 handleItemClick={handleItemClick}
                             />:

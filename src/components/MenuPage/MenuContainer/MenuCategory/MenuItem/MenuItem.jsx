@@ -5,7 +5,7 @@ import ItemQuantity from "../../../../ItemQuantity"
 import AddItemButton from "./AddItemButton"
 import ItemConfirmation from "./ItemConfirmation"
 
-function MenuItem({item, unitPrice, itemClicked, handleItemClick}){
+function MenuItem({itemID, item, unitPrice, itemClicked, handleItemClick}){
 
     // global bag context
     const bag = useContext(BagContext)
@@ -31,7 +31,7 @@ function MenuItem({item, unitPrice, itemClicked, handleItemClick}){
 
     const addNewItem = (quantity) => {
         setClicked(false)
-        handleAddItem(bag,item,quantity,unitPrice)
+        handleAddItem(bag,itemID,item,quantity,unitPrice)
         setQuantity(1)
     }
 
