@@ -42,7 +42,7 @@ function Newsletter(){
         e.preventDefault(); 
         
         // add email to database
-        fetch('/newsletter', {
+        fetch('https://citron-server.herokuapp.com/newsletter', {
             method: 'POST', 
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(userEmail)
@@ -60,7 +60,7 @@ function Newsletter(){
 
     return(
         <section id="newsletter" aria-label="Sign up for Citron Cafe's newsletter">
-            <h2>keep in touch.</h2>
+            <h2>Keep in Touch.</h2>
             <p>receive our weekly newsletter to know about our menu specials and launches.</p>
             <form onSubmit={handleSubmit} >
                 <label htmlFor="email">Email</label>
