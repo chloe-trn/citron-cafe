@@ -7,8 +7,7 @@ import 'react-lazy-load-image-component/src/effects/opacity.css';
 function Hero(props) {
     return (
         <section className="hero" aria-label="Welcome to Citron Café">
-        <p>welcome.</p>
-        <div aria-label="Decorative image carousel">
+        <h2>Welcome.</h2>
             <Carousel 
                 showArrows={true}
                 infiniteLoop={true}
@@ -34,7 +33,6 @@ function Hero(props) {
                         <img src={props.images[4]} alt=""/>
                     </div>
             </Carousel>
-        </div>
         </section>
     )
 }

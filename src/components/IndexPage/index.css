@@ -1,7 +1,7 @@
 .hero{
     position: relative;
 }
-.hero p{
+.hero h2{
     position: absolute; 
     z-index: 2;
     top: 50%; 
@@ -11,8 +11,10 @@
         -ms-transform: translateY(-50%);
          -o-transform: translateY(-50%);
             transform: translateY(-50%);
-    font-size: 4.3em;
+    font-size: 4rem;
     color: white;
+    border-radius: 4px;
+    font-weight: 500;
 }
 .hero .slide img{
     width: 100%;
@@ -31,7 +33,7 @@
        -moz-box-shadow: 0px 1px 4px #adabab;
             box-shadow: 0px 1px 4px #adabab; 
 }
-.sub-hero p{
+.sub-hero h3, .sub-hero p{
     color: white;
     position: absolute; 
     right: var(--nav-padding);
@@ -41,15 +43,17 @@
          -o-transform: translateY(50%);
             transform: translateY(50%);
     z-index: 2;
+    border-radius: 4px;
+    font-weight: 500;
 }
 #sub-one{
     top: 18%;
-    font-size: 2em;
+    font-size: 2.25rem;
 }
 #sub-two{
     display: inline-block;
     text-align: right;
-    width: 290px;
+    width: 317px;
     top: 40%;
     font-size: 0.9em;
     line-height: 1.5;
@@ -107,18 +111,22 @@
         -ms-flex-align: center;
             align-items: center;
 }
-.cell h2{
+.cell h3{
     font-size: 1.1em;
     font-weight: bolder;
-    text-transform: uppercase;
     color: var(--green);
-    margin-bottom: 20px;
+    margin: 20px 0;
     font-family: Muli-Regular; 
 }
-.cell p{
+.cell address{
     font-size: 0.9em;
     margin-bottom: 5px;
     line-height: 2.5;
+    font-style: normal;
+    text-align: center;
+}
+.cell img {
+    width: 3.5rem;
 }
 /* Newsletter/ #newsletter */
 #newsletter{
@@ -145,9 +153,6 @@
     height: 30px;
     padding: 5px;
     border: none; 
-    -webkit-border-radius: 0; 
-       -moz-border-radius: 0; 
-            border-radius: 0;
     font-size: 0.9em;
 }
 #email{
@@ -230,17 +235,17 @@
     background-color: var(--green);
     color: var(--cream);
 }
-.hero p, #sub-one, #sub-two{
+.hero h2, #sub-one, #sub-two{
     display: inline-block;
     line-height: 1.3;
     background: rgba(114, 109, 109, 0.3);
-    padding: 0 15px;
+    padding: 4px 15px;
 }
 @media screen and (max-width: 992px) {
-    .cell h2 {
+    .cell h3 {
         font-size: 1em;
     }
-    .cell p, #newsletter p, #submit, #email{
+    .cell address, #newsletter p, #submit, #email{
         font-size: 0.85em;
     }
     #newsletter h2 {
@@ -264,7 +269,7 @@
     .hero .slide img{
         height: 43vh;
     }
-    .hero p {
+    .hero h2 {
         top: 110px;
         left: 50%;
         -webkit-transform: translateX(-50%);
@@ -285,7 +290,7 @@
         top: 65%;
         font-size: 0.8em;
     }
-    .cell p, #newsletter p, #submit, #email{
+    .cell address, #newsletter p, #submit, #email{
         font-size: 0.85em;
     }
     #newsletter h2 {
@@ -307,14 +312,14 @@
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;     
     }
-    .cell h2 {
+    .cell h3 {
         margin-top: 30px;
         margin-bottom: 5px;
         font-size: 0.9em;
     }
 }
 @media screen and (max-width: 576px) {
-    .hero p {
+    .hero h2 {
         font-size: 2.2em;
     }
     .sub-hero p {
@@ -330,7 +335,7 @@
         font-size: 0.7em;
         padding: 0 6px;
     }
-    .cell p, #newsletter p, #submit, #email{
+    .cell address, #newsletter p, #submit, #email{
         font-size: 0.8em;
     }
     #newsletter h2 {
@@ -342,7 +347,7 @@
     #newsletter{
         padding: 30px 30px 20px 30px;
     }
-    .cell h2 {
+    .cell h3 {
         margin-bottom: 5px;
     }
     #newsletter p {
