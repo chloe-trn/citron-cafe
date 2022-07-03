@@ -119,6 +119,9 @@ a{
   font-size: 0.85rem;
 }
 /* Navbar */
+.hamburger{
+  display: none;
+}
 .navbar{
   background: var(--cream);
   padding: 15px var(--nav-padding);
@@ -369,6 +372,7 @@ a{
     margin: 27px 0; 
   }
   .hamburger{
+    display: block;
     background: var(--accent-green);
     padding: 5px 10px;
     cursor: pointer;
