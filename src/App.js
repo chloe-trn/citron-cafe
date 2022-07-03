@@ -1,9 +1,11 @@
+// import packages
 import React, { createContext, useState, useEffect, useRef } from 'react'
 import { HashRouter as Router, Switch } from 'react-router-dom'
 import { HashLink as Link } from 'react-router-hash-link'
+// import css
 import 'normalize.css'
 import './App.css'
-
+// import components
 import NavBar from './components/NavBar/NavBar'
 import IndexPage from './components/IndexPage/IndexPage'
 import GalleryPage from './components/GalleryPage/GalleryPage'
