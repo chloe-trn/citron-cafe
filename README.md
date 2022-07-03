@@ -52,6 +52,13 @@ npm run start
 
 * UPDATE as of 3/16/2021 - All code has been refactored for maintainability and better React architecture
 * The website now integrates the NodeJS webframework Express which is deployed on the Heroku cloud.  
+
+<p>
+<img src="/read-me/mysql-logo.png" width="100" />
+</p>
+
+* UPDATE as of 7/3/2022 - All code has been refactored for better accessibility. This includes improved use of semantic HTML, keyboard navigation, skip links, etc.
+* The website now interfaces with a MySQL database that stores newsletter signups, menu item information, and user transaction/purchase information. 
  
 ## Features 
 ### Infinite Autoplay Hero Slides
@@ -79,6 +86,7 @@ npm run start
 * Check out form only lets purchase go through if required fields are correctly input. 
 ### Responsive Design
 <p align="middle">
+<img src="/read-me/Mobile-Nav.png" width="250" height="450" />
 <img src="/read-me/Mobile-Home.png" width="250" height="450" />
 <img src="/read-me/Mobile-Gallery.png" width="250" height="450"  /> 
 <img src="/read-me/Mobile-Menu.png" width="250" height="450" />
@@ -93,5 +101,5 @@ npm run start
 * <a  href="https://stripe.com/"  target="_blank">Stripe</a> is used for front-end credit card number validation and formatting. A POST request to the Express server is sent at order submission which returns a response that triggers the loading of a confirmation message through React state. In this way, credit card validation and response was mocked. 
 
 ## Future Work 
-* Store user input email into a database
+* ~~Store user input email into a database~~ [UPDATE - completed as of 7/3/2022]
 * Add individual menu item description pages with pictures. 
