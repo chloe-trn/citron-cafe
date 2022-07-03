@@ -18,27 +18,30 @@
             flex-direction: column;
 }
 .gallery-container h2{
-    font-size: 1em;
-    margin: 0 auto;
     color:var(--green);
-    margin-top: 100px;
     font-family: Muli-Regular; 
+    font-size: 1rem;
+    margin: 100px auto 0;
     cursor:pointer;
     -webkit-transition: 0.3s ease-in;
-    -o-transition: 0.3s ease-in;
-    -moz-transition: 0.3s ease-in;
-    transition: 0.3s ease-in;
+         -o-transition: 0.3s ease-in;
+       -moz-transition: 0.3s ease-in;
+            transition: 0.3s ease-in;
 }
 .gallery-container h2:hover{
-    font-size: 1.015em;
+    font-size: 1.015rem;
     text-decoration: underline;
+}
+.gallery-container h2 > a{
+    color: var(--green);
 }
 .img1{-ms-grid-row: 1;-ms-grid-column: 1;grid-area: img1;}
 .img2{-ms-grid-row: 3;-ms-grid-column: 1;grid-area: img2;}
 .img3{-ms-grid-row: 1;-ms-grid-row-span: 3;-ms-grid-column: 3;grid-area: img3;}
 .img4{-ms-grid-row: 5;-ms-grid-column: 1;grid-area: img4;}
 .img5{-ms-grid-row: 5;-ms-grid-column: 3;grid-area: img5;}
-.gallery{
+.gallery ul{
+    list-style: none;
     margin: 40px 100px;
     display:-ms-grid;
     display:grid;
@@ -55,94 +58,65 @@
     width: 100%;
     height: 100%;
     display: block;
+    border-radius: 4px;
     -o-object-fit: cover;
        object-fit: cover;
 }
 .post{
     position:relative;
 }
-.wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-       -moz-transform: translate(-50%, -50%);
-         -o-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex; 
-    -webkit-box-align: center; 
-    -webkit-align-items: center; 
-       -moz-box-align: center; 
-        -ms-flex-align: center; 
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-       -moz-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    opacity: 0;
-    background: white;
-    height: 100%;
-    width: 100%;
-    -webkit-transition: .5s ease;
-    -o-transition: .5s ease;
-    -moz-transition: .5s ease;
-    transition: .5s ease;
-}
 .lazy-load-image-background.opacity.lazy-load-image-loaded {
     position: relative; 
     height: 100%;
     width: 100%;
 }
+.insta-overlay{
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: .5s ease;
+         -o-transition: .5s ease;
+       -moz-transition: .5s ease;
+            transition: .5s ease;
+}
 .insta-logo{
+    width: 70px;
     position: absolute; 
     left: 50%; 
     top: 50%; 
-    transform: translate(-50%, -50%);
-    width: 70px;
     cursor: pointer;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
-.post:hover > .wrapper:hover{ 
-    opacity:0.6;
-}
-@media (max-width: 1200px) {
-    .gallery{
-        margin: 40px 100px;
-    }
+.post:hover .insta-overlay{ 
+    opacity: 0.6;
 }
 @media (max-width: 992px) {
-    .gallery{
+    .gallery ul{
         margin: 40px 50px;
     }
 }
 @media (max-width: 768px) {
-    .gallery{
-        margin: 20px 20px;
-        grid-gap: 5px;
-    }
     .gallery-container h2{
-        font-size: 0.9em;
-        margin-top: 20px;
+        margin: 20px auto 0;
     }
-    #gallery-copyright{
-        margin-top: 20px;
-        padding-bottom: 20px;
+    .gallery ul{
+        margin: 40px 20px;
+        grid-template-areas:
+        'img1'
+        'img2'
+        'img3'
+        'img4'
+        'img5';
+        -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
     }
-}
-@media (max-width: 576px) {
-    .gallery{
-        margin: 20px 0px;
-        grid-gap: 0;
-    }
-    #gallery-copyright{
-        margin-top: 0;
-        padding-bottom: 10px;
-        font-size: 0.6em;
-    }
-
 }

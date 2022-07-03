@@ -1,6 +1,6 @@
 // import packages
 import React, { useContext, useState, useEffect } from 'react'
-// import contexts 
+// import contexts
 import { BagFunctionsContext } from '../../../../App'
 // import components
 import ItemName from './ItemName'
@@ -32,19 +32,33 @@ function BagItem({item,index}) {
     },[quantity])
 
     return (
-        <tr className='bag-item'>
-            <ItemName name={item.item}/> 
-            <ItemPrice price={item.unitPrice} />
-            <td className='bag-quantity'>
-                <ItemQuantity 
-                    itemID={item.item}
-                    quantity={quantity} 
-                    handleInputQuantityChange={handleInputQuantityChange}
-                />
-            </td>
-            <ItemSubtotal subtotal={item.quantity * item.unitPrice}/>
-            <ItemDelete handleDeleteItem={handleDeleteItem} index={index}/>
-        </tr>
+        <tbody>
+            <tr>
+                <th><strong>Item: </strong></th>
+                <ItemName name={item.item}/> 
+            </tr>
+            <tr>
+                <th><strong>Unit Price: </strong></th>
+                <ItemPrice price={item.unitPrice} />
+            </tr>
+            <tr>
+                <th><strong>Quantity: </strong></th>
+                <td className='bag-quantity'>
+                    <ItemQuantity 
+                        itemID={item.item}
+                        quantity={quantity} 
+                        handleInputQuantityChange={handleInputQuantityChange}
+                    />
+                </td>
+            </tr>
+            <tr>
+                <th><strong>Subtotal: </strong></th>
+                <ItemSubtotal subtotal={item.quantity * item.unitPrice}/>
+            </tr>
+            <tr className='mobile-delete'>
+                <ItemDelete handleDeleteItem={handleDeleteItem} index={index}/>
+            </tr>
+        </tbody>
     )
 }
 

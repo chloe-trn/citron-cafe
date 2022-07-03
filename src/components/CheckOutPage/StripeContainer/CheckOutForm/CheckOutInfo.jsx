@@ -1,16 +1,17 @@
-import React from 'react';
+// import packages
+import React from 'react'
 
 function CheckOutInfo() {
     return (
-        <div className="checkout-info">
-            <p className="testing-label"><b>For testing purposes, use this information:</b></p>
-            <p><b>Name:</b> John Doe</p>
-            <p><b>Phone Number:</b> 517-942-2404</p>
-            <p><b>Card Number:</b> 4242 4242 4242 4242</p>
-            <p><b>Expiration Date:</b> Any MM/YY in the future</p>
-            <p><b>CSV:</b> Any 3 numbers</p>
+        <div className='checkout-info'>
+            <p className='testing-label'><strong>For testing purposes, use this information:</strong></p>
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Phone Number:</strong> 517-942-2404</p>
+            <p><strong>Card Number:</strong> 4242 4242 4242 4242</p>
+            <p><strong>Expiration Date:</strong> Any MM/YY in the future</p>
+            <p><strong>CSV:</strong> Any 3 numbers</p>
         </div>
-    );
+    )
 }
 
-export default CheckOutInfo;
+export default CheckOutInfo

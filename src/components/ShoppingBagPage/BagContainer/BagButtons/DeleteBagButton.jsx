@@ -1,14 +1,15 @@
+// import packages
 import React from 'react'
 
 function DeleteBagButton(props) {
     return (
-        <input 
-            id="delete-btn"
-            className="bag-button" 
-            type="button" 
-            value="Clear Bag" 
+        <button
+            id='delete-btn'
+            className='bag-button' 
             onClick={props.handleClearBag}
-        />
+        >
+        Clear Bag
+        </button>
     )
 }
 

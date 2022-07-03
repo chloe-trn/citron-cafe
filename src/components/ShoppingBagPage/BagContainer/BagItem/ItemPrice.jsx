@@ -1,12 +1,10 @@
-import React from 'react';
+// import packages
+import React from 'react'
 
 function ItemPrice(props) {
     return (
-        <div className="bag-unit-price">
-            <span>Unit Price: </span>
-            {"$ " + props.price}
-        </div>
-    );
+        <td className='bag-unit-price'>{'$ ' + props.price}</td>
+    )
 }
 
-export default ItemPrice;
+export default ItemPrice

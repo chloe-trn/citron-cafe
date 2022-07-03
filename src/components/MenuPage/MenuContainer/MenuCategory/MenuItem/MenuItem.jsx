@@ -35,7 +35,14 @@ function MenuItem({itemID, item, unitPrice, itemClicked, handleItemClick}){
         setQuantity(1)
     }
 
-    const handleInputQuantityChange = e => setQuantity(e.target.value)
+    const handleInputQuantityChange = (e) => {
+        if (e.target.value === "") {
+            setQuantity(quantity)
+            alert("The minimum item quantity is 1, please enter a value of 1 or more")
+        } else {
+            setQuantity(e.target.value)
+        } 
+    }
 
     const handleAddBtnClick= () => {
         const itemQuantity = parseInt(quantity);
@@ -74,23 +81,21 @@ function MenuItem({itemID, item, unitPrice, itemClicked, handleItemClick}){
     },[itemClicked])
 
     return(
-        <div className="menu-item">
+        <li className="menu-item">
             <ItemName item={item} unitPrice={unitPrice} handleItemClick={handleItemClick} confirmation={confirmation}/>
             <div className="pop-ups">
                 <div className={ clicked ? "add-item-visible" : "add-item-hidden"} >
-                   <ItemQuantity 
+                    <label className="hidden" htmlFor={itemID}>Item Quantity</label>
+                    <ItemQuantity 
+                        itemID={itemID}
                         quantity={quantity} 
                         handleInputQuantityChange={handleInputQuantityChange} 
-                        style={{
-                            position: "relative",
-                            zIndex: "2", 
-                            marginRight: "15px"
-                        }}/>
-                   <AddItemButton handleAddBtnClick={handleAddBtnClick}/>
+                    />
+                    <AddItemButton handleAddBtnClick={handleAddBtnClick}/>
                 </div>
                 <ItemConfirmation itemAddedRef={itemAddedRef} confirmation={confirmation}/>
             </div>
-        </div>
+        </li>
     )
 }
 

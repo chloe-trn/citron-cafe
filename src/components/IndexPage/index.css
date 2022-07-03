@@ -1,29 +1,39 @@
+/*Hero and Subhero sections*/
 .hero{
     position: relative;
 }
+.hero .carousel .control-dots .dot {
+    width: 12px;
+    height: 12px;
+}
+.hero h2, #sub-one, #sub-two{
+    background: rgba(114, 109, 109, 0.3);
+    display: inline-block;
+    line-height: 1.3;
+    padding: 4px 15px;
+}
 .hero h2{
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: 500;
     position: absolute; 
-    z-index: 2;
     top: 50%; 
     left: var(--nav-padding);
+    z-index: 2;
     -webkit-transform: translateY(-50%);
        -moz-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
          -o-transform: translateY(-50%);
             transform: translateY(-50%);
-    font-size: 4rem;
-    color: white;
-    border-radius: 4px;
-    font-weight: 500;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
 }
 .hero .slide img{
     width: 100%;
     height: 520px;
     -o-object-fit: cover;
        object-fit: cover;
-}
-.carousel.carousel-slider .control-arrow:hover {
-    background: rgba(114, 109, 109, 0.3);
 }
 .sub-hero{
     position: relative;
@@ -34,17 +44,19 @@
             box-shadow: 0px 1px 4px #adabab; 
 }
 .sub-hero h3, .sub-hero p{
-    color: white;
+    color: #ffffff;
+    font-weight: 500;
     position: absolute; 
     right: var(--nav-padding);
+    z-index: 2;
     -webkit-transform: translateY(50%);
        -moz-transform: translateY(50%);
         -ms-transform: translateY(50%);
          -o-transform: translateY(50%);
             transform: translateY(50%);
-    z-index: 2;
-    border-radius: 4px;
-    font-weight: 500;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
 }
 #sub-one{
     top: 18%;
@@ -53,10 +65,10 @@
 #sub-two{
     display: inline-block;
     text-align: right;
+    font-size: 0.938rem;
+    line-height: 1.5;
     width: 317px;
     top: 40%;
-    font-size: 0.9em;
-    line-height: 1.5;
 }
 .sub-hero img{
     position:relative;
@@ -64,12 +76,10 @@
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    -webkit-transition: -webkit-transform 1.2s ease;
-    transition: -webkit-transform 1.2s ease;
-    -o-transition: -o-transform 1.2s ease;
-    -moz-transition: transform 1.2s ease, -moz-transform 1.2s ease;
-    transition: transform 1.2s ease;
-    transition: transform 1.2s ease, -webkit-transform 1.2s ease, -moz-transform 1.2s ease, -o-transform 1.2s ease;
+    -webkit-transition: transform 1.2s ease;
+         -o-transition: transform 1.2s ease;
+       -moz-transition: transform 1.2s ease;
+            transition: transform 1.2s ease;
 }
 .sub-hero img:hover{
     -webkit-transform: scale(1.05);
@@ -78,14 +88,21 @@
          -o-transform: scale(1.05);
             transform: scale(1.05);
 }
-/* Info */
+/* Infoformation section */
 .info{
     padding: 0 var(--nav-padding);
     height: 350px;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+}
+.info ul {
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     -webkit-box-align: center;
     -webkit-align-items: center;
        -moz-box-align: center;
@@ -93,6 +110,7 @@
             align-items: center;
 }
 .cell{
+    width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -111,49 +129,45 @@
         -ms-flex-align: center;
             align-items: center;
 }
+.cell img {
+    width: 56px;
+}
 .cell h3{
-    font-size: 1.1em;
-    font-weight: bolder;
+    font-family: Muli-Regular; 
+    font-size: 1.188rem;
+    font-weight: 600;
     color: var(--green);
     margin: 20px 0;
-    font-family: Muli-Regular; 
 }
 .cell address{
-    font-size: 0.9em;
-    margin-bottom: 5px;
-    line-height: 2.5;
+    font-size: 1rem;
     font-style: normal;
+    line-height: 2.5;
     text-align: center;
+    margin-bottom: 5px; 
 }
-.cell img {
-    width: 3.5rem;
-}
-/* Newsletter/ #newsletter */
+/* Newsletter section */
 #newsletter{
-    width: 100%;
-    color: var(--cream);
     background: var(--green);
-    padding:80px var(--nav-padding) 40px var(--nav-padding);
+    color: var(--cream);
     line-height: 2;
-}
-#newsletter label {
-    position: absolute;
-    visibility: hidden;
+    width: 100%;
+    padding: 80px var(--nav-padding) 40px var(--nav-padding);  
 }
 #newsletter h2{
-    font-weight: normal;
-    font-size: 1.2em;
     font-family: Muli-Regular; 
+    font-size: 1.25rem;
+    font-weight: 500;
 }
 #newsletter p{
-    font-size: 0.9em;
-    margin-bottom: 45px;
+    font-size: 1rem;
+    margin: 0 0 45px;
 }
-#email,#submit{
+#email, #submit{
+    font-size: 0.938rem;
     height: 30px;
     padding: 5px;
-    border: none; 
-    font-size: 0.9em;
+    border: none;
 }
 #email{
     width: 300px;
@@ -163,16 +177,16 @@
             box-shadow: inset 0px 1px 4px #adabab;
 }
 #submit{
-    margin-left: 10px;
-    width: 100px;
-    border: 2px solid var(--cream);
     background-color: transparent;
     color: var(--cream);
+    width: 100px;
+    margin: 5px 10px;
+    border: 2px solid var(--cream);
+    cursor: pointer;
     -webkit-transition: 0.1s linear;
     -o-transition: 0.1s linear;
     -moz-transition: 0.1s linear;
     transition: 0.1s linear;
-    cursor: pointer;
     -webkit-box-shadow: none;
        -moz-box-shadow: none;
             box-shadow: none;
@@ -182,7 +196,7 @@
     color: var(--black);
 }
 #email-confirmation{
-    margin-top: 15px;
+    margin: 15px 0 0;
     opacity: 0;
 }
 .email-animation {
@@ -228,48 +242,35 @@
     100% {opacity: 0;}
 }
 #index-copyright{
-    text-align: right;
-    font-family: Muli-Regular; 
-    font-size: 0.8em;
-    padding: 0 var(--nav-padding) 40px var(--nav-padding);
     background-color: var(--green);
     color: var(--cream);
+    font-family: Muli-Regular;
+    font-size: 0.875rem;
+    text-align: right;
+    padding: 0 var(--nav-padding) 40px var(--nav-padding);
 }
-.hero h2, #sub-one, #sub-two{
-    display: inline-block;
-    line-height: 1.3;
-    background: rgba(114, 109, 109, 0.3);
-    padding: 4px 15px;
-}
-@media screen and (max-width: 992px) {
-    .cell h3 {
-        font-size: 1em;
-    }
-    .cell address, #newsletter p, #submit, #email{
-        font-size: 0.85em;
-    }
-    #newsletter h2 {
-        font-size: 1.1em;
-    }
+@media screen and (max-width: 1000px) {
     .info {
-        margin: 50px var(--nav-padding);
+        height: 300px;
+        padding: 0;
+        margin: 50px 0;
+    }
+    .cell h3 {
+        font-size: 1.063rem;
+    }
+    .cell address {
+        font-size: 0.938rem;
     }
     #newsletter{
-        padding: 70px 50px 40px 50px;
+        padding: 70px 50px 40px;
     }
 }
 @media screen and (max-width: 768px) {
-    .sub-hero img:hover{
-        -webkit-transform: scale(1);
-           -moz-transform: scale(1);
-            -ms-transform: scale(1);
-             -o-transform: scale(1);
-                transform: scale(1);
-    }
     .hero .slide img{
         height: 43vh;
     }
     .hero h2 {
+        font-size: 4rem;
         top: 110px;
         left: 50%;
         -webkit-transform: translateX(-50%);
@@ -277,96 +278,89 @@
             -ms-transform: translateX(-50%);
              -o-transform: translateX(-50%);
                 transform: translateX(-50%);
-        font-size: 4em;
     }
     .sub-hero img{
         height: 360px;
     }
+    #sub-one,#sub-two{
+        text-align: center;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+           -moz-transform: translateX(50%);
+            -ms-transform: translateX(50%);
+            -o-transform: translateX(50%);
+               transform: translateX(50%);
+    }
     #sub-one {
-        top: 50%;
-        font-size: 1.6em;
+        top: 45%;
+        font-size: 1.625rem;
     }
     #sub-two {
-        top: 65%;
-        font-size: 0.8em;
-    }
-    .cell address, #newsletter p, #submit, #email{
-        font-size: 0.85em;
-    }
-    #newsletter h2 {
-        font-size: 1.1em;
-    }
-    .index-container,.sub-hero{
-        margin: 0;
-    }
-    #newsletter{
-        padding: 70px 30px 20px 30px;
-        margin-top: 30px;
-    }
-    #index-copyright{
-        padding: 0 30px 20px 30px;
+        top: 60%;
+        font-size: 1rem;
     }
     .info {
-        height: 440px;
-        margin: 0;
-        -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;     
+        height: fit-content;
+    }
+    .info ul{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-box-orient: vertical;
+        -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;   
     }
     .cell h3 {
-        margin-top: 30px;
-        margin-bottom: 5px;
-        font-size: 0.9em;
+        margin: 20px 0 5px;
+    }
+    #newsletter{
+        padding: 70px 30px 20px;
+        margin: 30px 0 0;
+    }
+    #index-copyright{
+        padding: 0 30px 20px;
     }
 }
 @media screen and (max-width: 576px) {
     .hero h2 {
-        font-size: 2.2em;
+        font-size: 3.375rem;
     }
-    .sub-hero p {
-        right: 10px;
-        z-index: 2;
-    }
-    #sub-one {    
-        top: 40%;
-        font-size: 1.4em;
+    #sub-one { 
+        font-size: 1rem;   
+        top: 52%;   
     }
     #sub-two {
-        top: 55%;  
-        font-size: 0.7em;
+        font-size: 0.75rem;
+        top: 62%;    
         padding: 0 6px;
     }
-    .cell address, #newsletter p, #submit, #email{
-        font-size: 0.8em;
-    }
-    #newsletter h2 {
-        font-size: 1em;
-    }
-    .index-container,.sub-hero{
-        margin: 0;
-    }
     #newsletter{
-        padding: 30px 30px 20px 30px;
-    }
-    .cell h3 {
-        margin-bottom: 5px;
+        padding: 30px 30px 20px;
     }
     #newsletter p {
-        margin-bottom: 25px;
+        font-size: 0.938rem;
+        margin: 0 0 25px;
     }
-    #email, #submit {
-        width: 65%;
+    #email{
+        width: 60%;
     }
     #submit{
         width: 30%; 
     }
 }
 @media screen and (max-width: 350px) {
+    #sub-one {
+        top: 45%;
+    }
+    #sub-two {
+        top: 63%;
+    }
     #email, #submit {
         width: 100%;
     }
     #submit {
-        margin-left: 0;
-        margin-top: 25px;
+        margin: 12px 0 0;
     }
 }
 @media screen and (max-height: 630px) {

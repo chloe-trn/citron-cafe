@@ -1,12 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 function ItemSubtotal(props) {
     return (
-        <div className="bag-subtotal">
-            <span>Subtotal: </span>
-            {"$" + props.subtotal}
-        </div>
-    );
+        <td className='bag-subtotal'>{'$' + props.subtotal}</td>
+    )
 }
 
-export default ItemSubtotal;
+export default ItemSubtotal

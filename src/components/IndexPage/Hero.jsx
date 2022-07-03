@@ -1,15 +1,17 @@
+// import packages
 import React from 'react'
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/opacity.css';
+import { Carousel } from 'react-responsive-carousel'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+//import css
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import 'react-lazy-load-image-component/src/effects/opacity.css'
 
 function Hero(props) {
     return (
-        <section className="hero" aria-label="Welcome to Citron Café">
-        <h2>Welcome.</h2>
+        <section className='hero' aria-label='Welcome to Citron Café'>
+            <h2>Welcome.</h2>
             <Carousel 
-                showArrows={true}
+                showArrows={false}
                 infiniteLoop={true}
                 useKeyboardArrows={true}
                 autoPlay={true}
@@ -18,19 +20,19 @@ function Hero(props) {
                 showThumbs={false}
             >
                     <div>
-                        <LazyLoadImage src={props.images[0]} effect="opacity" alt="" />
+                        <LazyLoadImage src={props.images[0]} effect='opacity' alt='' />
                     </div>
                     <div>
-                        <img src={props.images[1]} alt=""/>
+                        <img src={props.images[1]} alt=''/>
                     </div>
                     <div>
-                        <img src={props.images[2]} alt=""/>
+                        <img src={props.images[2]} alt=''/>
                     </div>
                     <div>
-                        <img src={props.images[3]} alt=""/>
+                        <img src={props.images[3]} alt=''/>
                     </div>
                     <div>
-                        <img src={props.images[4]} alt=""/>
+                        <img src={props.images[4]} alt=''/>
                     </div>
             </Carousel>
         </section>

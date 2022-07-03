@@ -1,11 +1,12 @@
-import React, { useState, useEffect, useRef} from "react"
+// import packages
+import React, { useState, useEffect, useRef} from 'react'
 
 function Newsletter(){
 
     // reflect if user has submitted an email 
     const [showEmailConfirmation, setShowEmailConfirmation] = useState(false);
     
-    // ref to access the "animationend" event in the DOM 
+    // ref to access the 'animationend' event in the DOM 
     const emailConfirmRef = useRef(null);
     
     // ref to handle email confirmation animation outside of useEffect 
@@ -16,7 +17,7 @@ function Newsletter(){
         // add animationend listener to email confirmation
         const emailConfirm = emailConfirmRef.current;
         const handleAnimationEnd = () =>  animationRef.current();
-        const emailConfirmListener = emailConfirm.addEventListener("animationend", handleAnimationEnd);
+        const emailConfirmListener = emailConfirm.addEventListener('animationend', handleAnimationEnd);
         // clean up 
         return () => emailConfirm.removeEventListener('animationend', emailConfirmListener);
     },[]);
@@ -33,7 +34,7 @@ function Newsletter(){
     const [userEmail, setUserEmail] = useState({})
     
     const handleChange = (event) => {
-        setUserEmail({ "email": event.target.value })
+        setUserEmail({ 'email': event.target.value })
     }
 
     const handleSubmit = (e) => {
@@ -44,7 +45,7 @@ function Newsletter(){
         // add email to database
         fetch('https://citron-server.herokuapp.com/newsletter', {
             method: 'POST', 
-            headers: { "Content-Type": "application/json"},
+            headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(userEmail)
         }).then((res) => {
             console.log(res)
@@ -52,40 +53,40 @@ function Newsletter(){
 
         // clear email field 
         const emailInput = e.target[0];
-        emailInput.value = "";
+        emailInput.value = '';
 
         // show confirmation to user
         setShowEmailConfirmation(true);
     }
 
     return(
-        <section id="newsletter" aria-label="Sign up for Citron Cafe's newsletter">
+        <section id='newsletter' aria-label="Sign up for Citron Cafe's newsletter">
             <h2>Keep in Touch.</h2>
             <p>receive our weekly newsletter to know about our menu specials and launches.</p>
             <form onSubmit={handleSubmit} >
-                <label htmlFor="email">Email</label>
+                <label htmlFor='email' className='hidden'>Email</label>
                 <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    placeholder="your email"
+                    type='email' 
+                    id='email' 
+                    name='email' 
+                    placeholder='your email'
                     disabled={showEmailConfirmation}
                     onChange={handleChange}
                     required
                 />
-                <label htmlFor="submit">Submit</label>
+                <label htmlFor='submit' className='hidden'>Submit</label>
                 <input 
-                    type="submit" 
-                    id="submit" 
-                    value="join"
+                    type='submit' 
+                    id='submit' 
+                    value='join'
                     disabled={showEmailConfirmation}
                 />
             </form>
                 <p  
                     ref={emailConfirmRef}
-                    className={showEmailConfirmation ? "email-animation" : ""}
-                    id="email-confirmation"
-                    role="status"
+                    className={showEmailConfirmation ? 'email-animation' : ''}
+                    id='email-confirmation'
+                    role='status'
                     >Your email has been received. Thanks for joining!
                 </p> 
         </section>

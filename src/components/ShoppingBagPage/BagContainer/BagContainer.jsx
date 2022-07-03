@@ -1,7 +1,11 @@
+// import packages
 import React, { useContext, useState, useEffect }from 'react'
+// import contexts
+import { BagContext, BagFunctionsContext } from '../../../App'
+// import components
 import BagHeadings from './BagHeadings'
-import { BagContext, BagFunctionsContext } from "../../../App"
 import BagItem from './BagItem/BagItem'
+import MobileBagItem from './BagItem/MobileBagItem'
 import BagTotal from './BagTotal'
 import BagButtons from './BagButtons/BagButtons'
 
@@ -30,13 +34,28 @@ function BagContainer(){
     useEffect(() => setTotal(calcTotal),[bag]) 
 
     return(
-        <div className="bag-container">
-            <BagHeadings />
-            {
-                bag.map((item,index) => 
-                    <BagItem key={item+index} item={item} index={index}/>
-                ) 
-            }
+        <div className='bag-container'>
+            <table className='desktop-bag'>
+                <thead>
+                    <tr className='bag-headings'>
+                        <BagHeadings />
+                    </tr>
+                </thead>
+                <tbody>
+                {
+                    bag.map((item,index) => 
+                        <BagItem key={item+index} item={item} index={index}/>
+                    ) 
+                } 
+                </tbody>   
+            </table>
+            <table className='mobile-bag'>
+                {
+                    bag.map((item,index) => 
+                        <MobileBagItem key={item+index} item={item} index={index}/>
+                    ) 
+                } 
+            </table>
             <BagTotal total={total}/>
             <BagButtons 
                 total={total} 

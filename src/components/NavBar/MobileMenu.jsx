@@ -1,12 +1,13 @@
-import React from "react"
+// import packages
+import React from 'react'
 
 function MobileMenu(props){
     return(
-        <div className="hamburger" onClick={props.onClick}>
-            <div className="hamburger-line"></div>
-            <div className="hamburger-line"></div>
-            <div className="hamburger-line"></div>
-        </div>
+        <button className='hamburger' aria-label='Open/close menu button' onClick={props.onClick}>
+            <div className='hamburger-line'></div>
+            <div className='hamburger-line'></div>
+            <div className='hamburger-line'></div>
+        </button>
     )
 }
 

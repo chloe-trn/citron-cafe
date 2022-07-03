@@ -11,7 +11,7 @@ function MenuContainer(){
     useEffect(() => {
         const fetchMenu = async () => {
             // get the data from the api
-            const data = await fetch('/menu');
+            const data = await fetch('https://citron-server.herokuapp.com/menu');
             // convert the data to json
             const json = await data.json();
             
@@ -57,18 +57,18 @@ function MenuContainer(){
     }
 
     return(
-        <div className="menu-container">
-            <h2 className="menu-h2">Menu</h2>
-            <p className="menu-p">click item to add to bag</p>
-            <div className="menu">
-                <Link to="/shopping-bag">
-                    <input className="navigation-btn" id="bag-btn" type="button" value="Go to Bag »" aria-label="Go to Bag"/>
-                </Link>
-                <MenuCategory name="pastries" title="Pastries" itemClicked={itemClicked} menu={pastryMenu} handleItemClick={handleItemClick}/>
-                <MenuCategory name="coffee" title="Coffee" itemClicked={itemClicked} menu={coffeeMenu} handleItemClick={handleItemClick}/>
-                <MenuCategory name="tea" title="Tea" itemClicked={itemClicked} menu={teaMenu} handleItemClick={handleItemClick}/>
-            </div>
-        </div>
+        <main id="main" className="menu-container"> 
+            <section className="menu">
+                <h2 className="menu-h2">Menu</h2>
+                <p className="menu-p">click item to add to bag</p>
+                <Link to="/shopping-bag" className="navigation-btn" id="bag-btn">Go to Bag »</Link>
+                <ul>
+                    <MenuCategory name="pastries" title="Pastries" itemClicked={itemClicked} menu={pastryMenu} handleItemClick={handleItemClick}/>
+                    <MenuCategory name="coffee" title="Coffee" itemClicked={itemClicked} menu={coffeeMenu} handleItemClick={handleItemClick}/>
+                    <MenuCategory name="tea" title="Tea" itemClicked={itemClicked} menu={teaMenu} handleItemClick={handleItemClick}/>
+                </ul>
+            </section>
+        </main>
     )
 }
 

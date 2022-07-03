@@ -1,17 +1,21 @@
-import React from "react"
-import "./index.css"
-import SubHero from "./SubHero"
-import Info from "./Info"
-import Newsletter from "./Newsletter"
-import Hero from "./Hero"
+// import packages
+import React from 'react'
+import { Helmet } from 'react-helmet'
+// import css
+import './index.css'
+// import components
+import SubHero from './SubHero'
+import Info from './Info'
+import Newsletter from './Newsletter'
+import Hero from './Hero'
 
 // import hero slider images 
-import image1 from "../../assets/main-img/img1.jpg"
-import image2 from "../../assets/main-img/img2.jpg"
-import image3 from "../../assets/main-img/img3.jpg"
-import image4 from "../../assets/main-img/img4.jpg"
-import image5 from "../../assets/main-img/img5.jpg"
-import image6 from "../../assets/main-img/img6.jpg"
+import image1 from '../../assets/main-img/img1.jpg'
+import image2 from '../../assets/main-img/img2.jpg'
+import image3 from '../../assets/main-img/img3.jpg'
+import image4 from '../../assets/main-img/img4.jpg'
+import image5 from '../../assets/main-img/img5.jpg'
+import image6 from '../../assets/main-img/img6.jpg'
 
 function IndexPage(props){
 
@@ -19,13 +23,16 @@ function IndexPage(props){
     
     return(
         <>
-        <main>
+        <Helmet>
+            <title>Citron Café</title>
+        </Helmet>
+        <main id='main'>
            <Hero images={images}/>
            <SubHero img={image6}/>
            <Info />
            <Newsletter />
         </main>
-        <footer id="index-copyright">Citron Café 2020</footer>
+        <footer id='index-copyright'>Citron Café 2020</footer>
         </>
     )
 }

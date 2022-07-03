@@ -1,16 +1,19 @@
+// import packages
 import React from 'react'
-import deleteIcon from "../../../../assets/cross.svg"
+// import assets
+import deleteIcon from '../../../../assets/delete.svg'
 
 function ItemDelete(props) {
     return (
-        <div className="delete-container">
+        <td className='delete-container'>
+            <button onClick={props.handleDeleteItem} >
             <img 
-                className="delete-item" 
+                className='delete-item' 
                 src={deleteIcon} 
-                alt="Delete shopping bag item icon" 
-                onClick={props.handleDeleteItem} 
+                alt='Delete shopping bag item icon'    
             />
-        </div>
+            </button>
+        </td>
     )
 }
 

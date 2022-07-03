@@ -40,18 +40,20 @@ function Summary() {
 
     return (
         <table className="summary-table">
-            <tr>
-                <td>Items [{totalBagItems}]</td>
-                <td className="col-two">$ {subtotal}</td>
-            </tr>
-            <tr>
-                <td>Tax</td>
-                <td className="col-two">$ {tax}</td>
-            </tr>
-            <tr>
-                <td>Total</td>
-                <td className="col-two">$ {total}</td>
-            </tr>
+            <tbody>
+                <tr>
+                    <th>Items [{totalBagItems}]</th>
+                    <td className="col-two">$ {subtotal}</td>
+                </tr>
+                <tr>
+                    <th>Tax</th>
+                    <td className="col-two">$ {tax}</td>
+                </tr>
+                <tr>
+                    <th>Total</th>
+                    <td className="col-two">$ {total}</td>
+                </tr>
+            </tbody>
         </table>
     );
 }

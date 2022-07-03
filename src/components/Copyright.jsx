@@ -1,5 +1,9 @@
 import React from 'react'
 
-const Copyright = () => <footer id="copyright">Citron Café 2020</footer>
+function Copyright(props){
+    return(
+        <footer id='copyright' className={props.page}>Citron Café 2022</footer>
+    )
+}
 
 export default Copyright
