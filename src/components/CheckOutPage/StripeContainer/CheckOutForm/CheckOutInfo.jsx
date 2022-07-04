@@ -9,7 +9,7 @@ function CheckOutInfo() {
             <p><strong>Phone Number:</strong> 517-942-2404</p>
             <p><strong>Card Number:</strong> 4242 4242 4242 4242</p>
             <p><strong>Expiration Date:</strong> Any MM/YY in the future</p>
-            <p><strong>CSV:</strong> Any 3 numbers</p>
+            <p><strong>CVC:</strong> Any 3 numbers</p>
         </div>
     )
 }

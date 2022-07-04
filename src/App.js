@@ -80,10 +80,11 @@ function App() {
       quantities.push(quantity)
     }
     const total = quantities.reduce((a, b) => a + b, 0)
+    localStorage.setItem('citron-bag-total-quantity',JSON.stringify(total))
     setTotalBagItems(total)
   }
 
-  const getTotalQuantity = () => totalBagItems
+  const getTotalQuantity = () => JSON.parse(localStorage.getItem('citron-bag-total-quantity'))
 
   // set current bag to local storage and calc the total num of bag items on each bag modification 
   useEffect(() => {
