@@ -13,12 +13,15 @@ function BagItem({item,index}) {
 
     const {handleQuantityChange, deleteItem} = useContext(BagFunctionsContext)
     const [quantity, setQuantity] = useState(item.quantity)
+    const [invalidQuantity, setInvalidQuantity] = useState(false)
 
     const handleInputQuantityChange = (e) => {
-        if (e.target.value === '') {
-            setQuantity(quantity)
-            alert('The minimum item quantity is 1. Please use the delete button if you would like to remove the item from your shopping bag')
+        let input = parseInt(e.target.value)
+        if ( input === "" || input === "0" || isNaN(input)) {
+            setInvalidQuantity(true)
+            setQuantity(e.target.value)
         } else {
+            setInvalidQuantity(false)
             setQuantity(e.target.value)
         } 
     }
@@ -41,6 +44,7 @@ function BagItem({item,index}) {
                     quantity={quantity} 
                     handleInputQuantityChange={handleInputQuantityChange}
                 />
+                <p className={!invalidQuantity ? 'quantity-error' : 'quantity-error true'}>Please input a valid quantity</p>
             </td>
             <ItemSubtotal subtotal={item.quantity * item.unitPrice}/>
             <ItemDelete handleDeleteItem={handleDeleteItem} index={index}/>

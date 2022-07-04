@@ -12,7 +12,7 @@ function MenuItem({itemID, item, unitPrice, itemClicked, handleItemClick}){
     const {handleQuantityChange, handleAddItem} = useContext(BagFunctionsContext)
 
      // states
-    const [quantity,setQuantity] = useState(1);
+    const [quantity, setQuantity] = useState(1);
     const [clicked, setClicked] = useState(false); // reflect which item is currently clicked 
     const [confirmation, setConfirmation] = useState(false);  // relect if item clicked has been added
 
@@ -35,19 +35,15 @@ function MenuItem({itemID, item, unitPrice, itemClicked, handleItemClick}){
         setQuantity(1)
     }
 
+    // change current quantity with user input
     const handleInputQuantityChange = (e) => {
-        if (e.target.value === "") {
-            setQuantity(quantity)
-            alert("The minimum item quantity is 1, please enter a value of 1 or more")
-        } else {
-            setQuantity(e.target.value)
-        } 
+        setQuantity(e.target.value) 
     }
 
     const handleAddBtnClick= () => {
         const itemQuantity = parseInt(quantity);
         // account for input errors in quantity input 
-        if(itemQuantity === "" || itemQuantity === "0"){ 
+        if(itemQuantity === "" || itemQuantity === "0" || isNaN(itemQuantity)){ 
             alert("The quantity chosen is not valid. Please choose a numeric quantity greater than 0 to add to your shopping bag.")
         }else{   
             const itemInBag = bag.some(obj => obj.item === item)
@@ -55,10 +51,10 @@ function MenuItem({itemID, item, unitPrice, itemClicked, handleItemClick}){
                 updateQuantity(itemQuantity) 
             }else{
                 addNewItem(itemQuantity)
-            }        
-        }
-        animateConfirmation()
-        setClicked(false)
+            } 
+            animateConfirmation()
+            setClicked(false)       
+        } 
     }
 
     // set up event listener for animation when user add an item 
