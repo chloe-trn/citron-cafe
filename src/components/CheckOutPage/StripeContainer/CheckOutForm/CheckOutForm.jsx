@@ -81,9 +81,15 @@ function CheckOutForm() {
         <>
         { !success?
             <>
-            <div className='left'> 
+            <div className='left'>
                 <Link to='/shopping-bag' className='navigation-btn' id='go-to-bag'>« Back to Bag</Link>
+                <div className='summary'> 
+                    <h2 id='summary-heading'>Summary</h2> 
+                    <Summary />            
+                </div>
                 <CheckOutInfo />
+            </div>
+            <div className='right'>  
                 <form id='form' onSubmit={handleSubmit}> 
                     <fieldset> 
                         <legend>Your Information</legend>      
@@ -97,20 +103,14 @@ function CheckOutForm() {
                     </fieldset>
                     <button className='navigation-btn' type='submit' >Confirm Order</button> 
                 </form> 
-            </div>         
-            <div className='right'>
-                <div className='summary'> 
-                    <h2 id='summary-heading'>Summary</h2> 
-                    <Summary />            
-                </div>
-            </div>
+            </div>           
             </>
             : 
             <>
-                <Helmet>
-                    <title>Citron Café | Order Confirmed</title>
-                </Helmet>
-                <OrderConfirmation />
+            <Helmet>
+                <title>Citron Café | Order Confirmed</title>
+            </Helmet>
+            <OrderConfirmation />
             </>}
         </>
     )
