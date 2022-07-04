@@ -6,7 +6,7 @@
     display: grid;
     -ms-grid-columns: 0.5fr 60px 0.5fr;
     grid-template-columns: 0.5fr 0.5fr;
-    grid-column-gap: 60px;
+    grid-column-gap: 100px;
 }
 /*Checkout introductory information*/
 .checkout-info{
