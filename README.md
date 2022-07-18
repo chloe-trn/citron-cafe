@@ -50,8 +50,9 @@ npm run start
 <img src="/read-me/heroku-logo-solid-purple.png" width="100" /> 
 </p>
 
-* UPDATE as of 3/16/2021 - All code has been refactored for maintainability and better React architecture
+* UPDATE as of 3/16/2021 - All code has been refactored for maintainability and better React architecture.
 * The website now integrates the NodeJS webframework Express which is deployed on the Heroku cloud.  
+* Currently working on transferring the codebase to TypeScript.
 
 <p>
 <img src="/read-me/mysql-logo.png" width="100" />
