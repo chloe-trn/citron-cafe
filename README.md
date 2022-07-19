@@ -50,7 +50,7 @@ npm run start
 <img src="/read-me/heroku-logo-solid-purple.png" width="100" /> 
 </p>
 
-* UPDATE as of 3/16/2021 - All code has been refactored for maintainability and better React architecture
+* UPDATE as of 3/16/2021 - All code has been refactored for maintainability and better React architecture.
 * The website now integrates the NodeJS webframework Express which is deployed on the Heroku cloud.  
 
 <p>
@@ -59,6 +59,7 @@ npm run start
 
 * UPDATE as of 7/3/2022 - All code has been refactored for better accessibility. This includes improved use of semantic HTML, keyboard navigation, skip links, etc.
 * The website now interfaces with a MySQL database that stores newsletter signups, menu item information, and user transaction/purchase information. 
+* Currently working on transferring the codebase to TypeScript.
  
 ## Features 
 ### Infinite Autoplay Hero Slides
