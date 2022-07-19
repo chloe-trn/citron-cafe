@@ -4,14 +4,14 @@
     margin: 60px auto;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 0.5fr 60px 0.5fr;
-    grid-template-columns: 0.5fr 0.5fr;
-    grid-column-gap: 100px;
+    -ms-grid-columns: 0.4fr 80px 0.6fr;
+    grid-template-columns: 0.4fr 0.6fr;
+    grid-column-gap: 80px;
 }
 /*Checkout introductory information*/
 .checkout-info{
     font-size: 1rem;
-    margin: 45px 0 30px 0;
+    margin: 45px 0 40px 0;
     line-height: 1.7;
 }
 .testing-label{

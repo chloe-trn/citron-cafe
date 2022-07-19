@@ -87,9 +87,9 @@ function CheckOutForm() {
                     <h2 id='summary-heading'>Summary</h2> 
                     <Summary />            
                 </div>
-                <CheckOutInfo />
             </div>
-            <div className='right'>  
+            <div className='right'> 
+                <CheckOutInfo /> 
                 <form id='form' onSubmit={handleSubmit}> 
                     <fieldset> 
                         <legend>Your Information</legend>      
