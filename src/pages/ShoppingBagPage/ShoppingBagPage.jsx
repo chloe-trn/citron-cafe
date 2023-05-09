@@ -5,7 +5,7 @@ import { Link} from 'react-router-dom'
 // import css
 import './shopping-bag.css'
 // import components
-import Copyright from '../Copyright'
+import Copyright from '../../components/Copyright'
 import BagContainer from './BagContainer/BagContainer'
 
 function ShoppingBagPage(){

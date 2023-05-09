@@ -1,7 +1,7 @@
 import React, { useState, useRef, useContext, useEffect } from 'react'
 import { BagContext, BagFunctionsContext } from "../../../../../App"
 import ItemName from "./ItemName"
-import ItemQuantity from "../../../../ItemQuantity"
+import ItemQuantity from "../../../../../components/ItemQuantity"
 import AddItemButton from "./AddItemButton"
 import ItemConfirmation from "./ItemConfirmation"
 

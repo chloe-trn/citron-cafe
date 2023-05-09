@@ -5,7 +5,7 @@ import { BagFunctionsContext } from '../../../../App'
 // import components
 import ItemName from './ItemName'
 import ItemPrice from './ItemPrice'
-import ItemQuantity from '../../../ItemQuantity'
+import ItemQuantity from '../../../../components/ItemQuantity'
 import ItemSubtotal from './ItemSubtotal'
 import ItemDelete from './ItemDelete'
 

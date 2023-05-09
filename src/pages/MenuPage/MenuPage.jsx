@@ -2,7 +2,7 @@ import React from "react"
 import { Helmet } from 'react-helmet'
 import MenuContainer from "./MenuContainer/MenuContainer"
 import './menu.css'
-import Copyright from "../Copyright"
+import Copyright from "../../components/Copyright"
 
 const MenuPage = () => {
 

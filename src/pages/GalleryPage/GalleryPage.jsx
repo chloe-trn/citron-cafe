@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet'
 import './gallery.css'
 // import components
 import GalleryGrid from './GalleryGrid/GalleryGrid'
-import Copyright from '../Copyright'
+import Copyright from '../../components/Copyright'
 // import assets
 import insta1 from '../../assets/gallery-img/img1.jpg'
 import insta2 from '../../assets/gallery-img/img2.jpg'

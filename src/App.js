@@ -1,17 +1,13 @@
 // import packages
 import React, { createContext, useState, useEffect, useRef } from 'react'
-import { HashRouter as Router, Switch } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom'
 import { HashLink as Link } from 'react-router-hash-link'
 // import css
 import 'normalize.css'
 import './App.css'
 // import components
 import NavBar from './components/NavBar/NavBar'
-import IndexPage from './components/IndexPage/IndexPage'
-import GalleryPage from './components/GalleryPage/GalleryPage'
-import MenuPage from './components/MenuPage/MenuPage'
-import ShoppingBagPage from './components/ShoppingBagPage/ShoppingBagPage'
-import CheckOutPage from './components/CheckOutPage/CheckOutPage'
+import PageRouter from './components/PageRouter'
 
 // global contexts
 export const BagContext = createContext([])
@@ -105,13 +101,7 @@ function App() {
               deleteItem: deleteItem,
               getTotalQuantity: getTotalQuantity
           }}>
-          <Switch>
-            <MenuPage exact path='/menu' />
-            <IndexPage exact path='/' widthRef={widthRef}/>
-            <GalleryPage exact path='/gallery' />
-            <ShoppingBagPage exact path='/shopping-bag' />
-            <CheckOutPage exact path='/check-out' />
-          </Switch>
+          <PageRouter />
           </BagFunctionsContext.Provider>
           </BagContext.Provider>
           <Link to='#App' className='skip-link'>Skip to top</Link>
