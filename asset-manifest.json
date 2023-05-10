@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/citron-cafe/static/css/main.29a93cae.css",
+    "main.js": "/citron-cafe/static/js/main.8675a7f7.js",
+    "static/media/NanumGothic-Regular.woff": "/citron-cafe/static/media/NanumGothic-Regular.a12a9e44adcc4d1955bf.woff",
+    "static/media/menu.jpg": "/citron-cafe/static/media/menu.04c45eeef6b5bc5d7872.jpg",
+    "static/media/img4.jpg": "/citron-cafe/static/media/img4.794384a3f44610601b7f.jpg",
+    "static/media/img6.jpg": "/citron-cafe/static/media/img6.356ce378a46822a8b722.jpg",
+    "static/media/img3.jpg": "/citron-cafe/static/media/img3.6caa5846e4ef1c24c590.jpg",
+    "static/media/img2.jpg": "/citron-cafe/static/media/img2.9564ed24261ae37248d2.jpg",
+    "static/media/img1.jpg": "/citron-cafe/static/media/img1.48c037a62bc1a9d63cf8.jpg",
+    "static/media/img5.jpg": "/citron-cafe/static/media/img5.9b636e2f4a5c3eaed5c4.jpg",
+    "static/media/Muli-Regular.woff": "/citron-cafe/static/media/Muli-Regular.1097f30cacc100fa75f3.woff",
+    "static/media/contact.svg": "/citron-cafe/static/media/contact.6b96f51ae826ac42b9f111713f180254.svg",
+    "static/media/instagram.svg": "/citron-cafe/static/media/instagram.83da4327e5271a9b0053c202da8ee9a1.svg",
+    "index.html": "/citron-cafe/index.html",
+    "static/media/shopping-bag.svg": "/citron-cafe/static/media/shopping-bag.dc8fba94664667d4c00796df8555fdf6.svg",
+    "static/media/delete.svg": "/citron-cafe/static/media/delete.3ef873f362556a3553bd7cca3fdfe19f.svg",
+    "static/media/location.svg": "/citron-cafe/static/media/location.2a676165cc990db0e9598a2b55fde161.svg",
+    "static/media/hours.svg": "/citron-cafe/static/media/hours.ab3db78f1b462ab3750956ba6bcfb4ff.svg",
+    "main.29a93cae.css.map": "/citron-cafe/static/css/main.29a93cae.css.map",
+    "main.8675a7f7.js.map": "/citron-cafe/static/js/main.8675a7f7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.29a93cae.css",
+    "static/js/main.8675a7f7.js"
+  ]
+}
