@@ -33,6 +33,36 @@ function BagContainer(){
 
     useEffect(() => setTotal(calcTotal),[bag]) 
 
+    const handleClick = async () => {
+
+        // consolidate purchase information
+        let purchaseArray = bag.map(({ itemID, quantity }) => ({ itemID: parseInt(itemID), quantity }));
+        let purchaseObject = {
+            items: purchaseArray
+        }
+
+        fetch("https://citron-server.herokuapp.com/checkout-session", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(purchaseObject),
+          })
+        .then(res => {
+            //  checks if the request is successful, then extracts the JSON data from body
+            //. if not successful, it rejects the promise with the JSON data as the reason for the rejection
+            if (res.ok) return res.json()
+            return res.json().then(json => Promise.reject(json))
+        })
+        .then(({ url }) => {
+            window.location = url
+        })
+        .catch(e => {
+            console.error(e.error)
+        })
+    };
+
+
     return(
         <div className='bag-container'>
             <table className='desktop-bag'>
@@ -61,6 +91,9 @@ function BagContainer(){
                 total={total} 
                 handleClearBag={handleClearBag}
             />
+            <button onClick={handleClick}>
+            Check out (Beta)   
+            </button>
         </div>
     )
 }
