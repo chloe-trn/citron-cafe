@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link, useLocation} from 'react-router-dom'
 // import components
+import Header from '../Elements/Header'
 import BrandLogo from './BrandLogo'
 import MobileMenu from './MobileMenu'
 import Banner from './Banner'
@@ -57,7 +58,7 @@ function NavBar({bagNum, widthRef}){
     return(
         <>
             <Banner/>
-            <header>
+            <Header>
             {
                 normalNavPaths.includes(pathname) ?
                 <>
@@ -87,7 +88,7 @@ function NavBar({bagNum, widthRef}){
                     </Link> 
                 </nav>
             }
-            </header>
+            </Header>
         </>
     )
 }
