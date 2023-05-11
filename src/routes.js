@@ -2,7 +2,7 @@ import IndexPage from './pages/IndexPage/IndexPage'
 import GalleryPage from './pages/GalleryPage/GalleryPage'
 import MenuPage from './pages/MenuPage/MenuPage'
 import ShoppingBagPage from './pages/ShoppingBagPage/ShoppingBagPage'
-import OrderConfirmation from './pages/OrderConfirmation/OrderConfirmation'
+import OrderConfirmationPage from './pages/OrderConfirmationPage/OrderConfirmationPage'
 
 const routes = [
   {
@@ -28,7 +28,7 @@ const routes = [
   {
     path: '/order-confirmed',
     exact: true,
-    component: OrderConfirmation
+    component: OrderConfirmationPage
   }
 ];
 
