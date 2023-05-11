@@ -241,7 +241,7 @@
     85%  {opacity: 1;}
     100% {opacity: 0;}
 }
-#index-copyright{
+#copyright.index-copyright{
     background-color: var(--green);
     color: var(--cream);
     font-family: Muli-Regular;
@@ -318,8 +318,9 @@
         padding: 70px 30px 20px;
         margin: 30px 0 0;
     }
-    #index-copyright{
+    #copyright.index-copyright{
         padding: 0 30px 20px;
+        margin: 0;
     }
 }
 @media screen and (max-width: 576px) {

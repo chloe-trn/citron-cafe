@@ -15,7 +15,7 @@ const MenuPage = () => {
             <Main class="menu-container">
                 <MenuContainer />
             </Main>
-            <Copyright page="menu-page"/>
+            <Copyright class="menu-page"/>
         </>
     )
 }
