@@ -1,13 +1,13 @@
 // import packages
 import React, { createContext, useState, useEffect, useRef } from 'react'
 import { HashRouter as Router } from 'react-router-dom'
-import { HashLink as Link } from 'react-router-hash-link'
 // import css
 import 'normalize.css'
 import './App.css'
 // import components
 import NavBar from './components/NavBar/NavBar'
 import PageRouter from './components/PageRouter'
+import SkipLink from './components/Elements/SkipLink'
 
 // global contexts
 export const BagContext = createContext([])
@@ -91,7 +91,7 @@ function App() {
   return (
     <Router>
       <div id='App' className='App'>  
-          <Link to='#main' className='skip-link'>Skip to main content</Link>
+          <SkipLink id="#main" locationText="main content"/>
           <NavBar bagNum={totalBagItems} widthRef={widthRef}/>
           <BagContext.Provider value={bag}>
           <BagFunctionsContext.Provider value={{
@@ -104,7 +104,7 @@ function App() {
           <PageRouter />
           </BagFunctionsContext.Provider>
           </BagContext.Provider>
-          <Link to='#App' className='skip-link'>Skip to top</Link>
+          <SkipLink id="#App" locationText="top"/>
       </div>
     </Router>
   )
