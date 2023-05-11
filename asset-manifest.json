@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/citron-cafe/static/css/main.29a93cae.css",
-    "main.js": "/citron-cafe/static/js/main.8675a7f7.js",
+    "main.css": "/citron-cafe/static/css/main.74079e42.css",
+    "main.js": "/citron-cafe/static/js/main.770c796b.js",
     "static/media/NanumGothic-Regular.woff": "/citron-cafe/static/media/NanumGothic-Regular.a12a9e44adcc4d1955bf.woff",
     "static/media/menu.jpg": "/citron-cafe/static/media/menu.04c45eeef6b5bc5d7872.jpg",
     "static/media/img4.jpg": "/citron-cafe/static/media/img4.794384a3f44610601b7f.jpg",
@@ -18,11 +18,11 @@
     "static/media/delete.svg": "/citron-cafe/static/media/delete.3ef873f362556a3553bd7cca3fdfe19f.svg",
     "static/media/location.svg": "/citron-cafe/static/media/location.2a676165cc990db0e9598a2b55fde161.svg",
     "static/media/hours.svg": "/citron-cafe/static/media/hours.ab3db78f1b462ab3750956ba6bcfb4ff.svg",
-    "main.29a93cae.css.map": "/citron-cafe/static/css/main.29a93cae.css.map",
-    "main.8675a7f7.js.map": "/citron-cafe/static/js/main.8675a7f7.js.map"
+    "main.74079e42.css.map": "/citron-cafe/static/css/main.74079e42.css.map",
+    "main.770c796b.js.map": "/citron-cafe/static/js/main.770c796b.js.map"
   },
   "entrypoints": [
-    "static/css/main.29a93cae.css",
-    "static/js/main.8675a7f7.js"
+    "static/css/main.74079e42.css",
+    "static/js/main.770c796b.js"
   ]
 }
