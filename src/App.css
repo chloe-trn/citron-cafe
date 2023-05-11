@@ -116,6 +116,7 @@ a{
 }
 .decoration{
   font-size: 0.85rem;
+  margin: 0 0.9rem;
 }
 /* Navbar */
 .hamburger{
@@ -400,6 +401,7 @@ a{
   }
   .decoration{
     font-size: 0.563rem;
+    margin: 0;
   }
   .hamburger{
     padding: 6px 7px;

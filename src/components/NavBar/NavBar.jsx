@@ -2,7 +2,8 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link, useLocation} from 'react-router-dom'
 // import components
-import BrandLogo from './BrandLogo'
+import Header from '../Elements/Header'
+import BrandHeading from './BrandHeading'
 import MobileMenu from './MobileMenu'
 import Banner from './Banner'
 // import assets
@@ -56,13 +57,13 @@ function NavBar({bagNum, widthRef}){
 
     return(
         <>
-            <Banner/>
-            <header>
+            <Banner class="banner" decor="✧･ﾟ*✧" text="buy one pastry in store and get one free every friday"/>
+            <Header>
             {
                 normalNavPaths.includes(pathname) ?
                 <>
                 <nav className='navbar' ref={navRef}>
-                    <BrandLogo />
+                    <BrandHeading class="navbar-brand" brandName="Citron Café"/>
                     <MobileMenu onClick={handleMobileMenuClick}/>              
                     <ul className={ status ? 'nav-ul nav-ul-open' : (window.innerWidth < 768 && count > 0) ? 'nav-ul' : 'nav-ul'}>
                         <li className='nav-item' onClick={handleMenuLinkClick}><Link className='nav-link' to='/'>Home</Link></li>
@@ -80,14 +81,10 @@ function NavBar({bagNum, widthRef}){
                 </nav>
                 </> :  
                 <nav className='navbar simple' ref={navRef}>
-                    <Link to='/'>
-                        <div className='navbar-brand'>
-                            <h1>citron café</h1>
-                        </div>
-                    </Link> 
+                    <BrandHeading class="navbar-brand" brandName="Citron Café"/>
                 </nav>
             }
-            </header>
+            </Header>
         </>
     )
 }

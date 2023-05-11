@@ -2,12 +2,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function BrandLogo(){
+function BrandHeading(props){
     return(
         <Link to='/' className='navbar-brand'>
-            <h1>Citron Café</h1>
+            <h1>{props.brandName}</h1>
         </Link>
     )
 }
 
-export default BrandLogo
+export default BrandHeading
