@@ -57,7 +57,7 @@ function NavBar({bagNum, widthRef}){
 
     return(
         <>
-            <Banner/>
+            <Banner class="banner" decor="✧･ﾟ*✧" text="buy one pastry in store and get one free every friday"/>
             <Header>
             {
                 normalNavPaths.includes(pathname) ?

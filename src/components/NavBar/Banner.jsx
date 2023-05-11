@@ -1,10 +1,14 @@
 // import packages
 import React from 'react'
 
-function Banner(){
+function Banner(props){
     return(
-        <aside className='banner'>
-            <p><span className='decoration'>✧･ﾟ*✧</span> buy one pastry in store and get one free every friday <span className='decoration'>✧*･ﾟ✧</span></p>
+        <aside className={props.class}>
+            <p>
+                { props.decor ? <span className='decoration'>✧*･ﾟ✧</span>: <></> }
+                {props.text}
+                { props.decor ? <span className='decoration'>✧*･ﾟ✧</span>: <></> }
+            </p>
         </aside>
     )
 }
