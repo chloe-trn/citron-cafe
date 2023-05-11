@@ -7,7 +7,6 @@ import BagHeadings from './BagHeadings'
 import BagItem from './BagItem/BagItem'
 import MobileBagItem from './BagItem/MobileBagItem'
 import BagTotal from './BagTotal'
-import BagButtons from './BagButtons/BagButtons'
 
 function BagContainer(){
 
@@ -41,7 +40,7 @@ function BagContainer(){
             items: purchaseArray
         }
 
-        fetch("https://citron-server.herokuapp.com/checkout-session", {
+        fetch("http://localhost:5000/checkout-session", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -87,13 +86,16 @@ function BagContainer(){
                 } 
             </table>
             <BagTotal total={total}/>
-            <BagButtons 
-                total={total} 
-                handleClearBag={handleClearBag}
-            />
-            <button onClick={handleClick}>
-            Check out (Beta)   
-            </button>
+            <div className='bag-buttons'>
+                {
+                    (total > 0) ?
+                    <>
+                        <button id='delete-btn' className='bag-button' onClick={handleClearBag}>Clear Bag</button>
+                        <button  id='check-out-btn' className='bag-button' disabled={false} onClick={handleClick}>Check out</button>
+                    </>:
+                    <></>
+                }
+            </div>
         </div>
     )
 }
