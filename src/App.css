@@ -401,6 +401,7 @@ a{
   }
   .decoration{
     font-size: 0.563rem;
+    margin: 0;
   }
   .hamburger{
     padding: 6px 7px;
