@@ -46,7 +46,7 @@
 .bag-container > table > tbody > tr > td{
     text-align: center;
 }
-.bag-container > table > thead > tr > th.bag-heading.item,
+.bag-container > table > thead > tr > th.bag-heading.item-heading,
 .bag-container > table > tbody > tr > td.bag-item-name{
     text-align: left;
 }
