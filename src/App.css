@@ -45,7 +45,6 @@ a{
 }
 .App{
   position: relative;
-  overflow: hidden;
 }
 /*Accessibility*/
 .hidden,.skip-link{
