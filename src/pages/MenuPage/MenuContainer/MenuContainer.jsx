@@ -57,18 +57,16 @@ function MenuContainer(){
     }
 
     return(
-        <main id="main" className="menu-container"> 
-            <section className="menu">
-                <h2 className="menu-h2">Menu</h2>
-                <p className="menu-p">click item to add to bag</p>
-                <Link to="/shopping-bag" className="navigation-btn" id="bag-btn">Go to Bag »</Link>
-                <ul>
-                    <MenuCategory name="pastries" title="Pastries" itemClicked={itemClicked} menu={pastryMenu} handleItemClick={handleItemClick}/>
-                    <MenuCategory name="coffee" title="Coffee" itemClicked={itemClicked} menu={coffeeMenu} handleItemClick={handleItemClick}/>
-                    <MenuCategory name="tea" title="Tea" itemClicked={itemClicked} menu={teaMenu} handleItemClick={handleItemClick}/>
-                </ul>
-            </section>
-        </main>
+        <section className="menu">
+            <h2 className="menu-h2">Menu</h2>
+            <p className="menu-p">click item to add to bag</p>
+            <Link to="/shopping-bag" className="navigation-btn" id="bag-btn">Go to Bag »</Link>
+            <ul>
+                <MenuCategory name="pastries" title="Pastries" itemClicked={itemClicked} menu={pastryMenu} handleItemClick={handleItemClick}/>
+                <MenuCategory name="coffee" title="Coffee" itemClicked={itemClicked} menu={coffeeMenu} handleItemClick={handleItemClick}/>
+                <MenuCategory name="tea" title="Tea" itemClicked={itemClicked} menu={teaMenu} handleItemClick={handleItemClick}/>
+            </ul>
+        </section>
     )
 }
 

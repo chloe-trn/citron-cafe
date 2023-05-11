@@ -14,7 +14,7 @@ function GalleryGrid({images, instaLogo}){
         alert("Clicking here would lead to Citron Cafe's instagram page. This is a test site so no instagram account is available.")
     }
     return(
-        <main id='main' className='gallery-container'>
+        <>
             <h2><Link to='#' onClick={handleInstaHandleClick}>@citron-cafe.co</Link></h2>
             <section className='gallery'>
                 <ul>
@@ -32,7 +32,7 @@ function GalleryGrid({images, instaLogo}){
                 }
                 </ul>
             </section>
-        </main>
+        </>
     )
 }
 

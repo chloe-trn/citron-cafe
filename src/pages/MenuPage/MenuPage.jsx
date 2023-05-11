@@ -1,8 +1,9 @@
 import React from "react"
 import { Helmet } from 'react-helmet'
+import Main from "../../components/Elements/Main"
 import MenuContainer from "./MenuContainer/MenuContainer"
-import './menu.css'
 import Copyright from "../../components/Copyright"
+import './menu.css'
 
 const MenuPage = () => {
 
@@ -10,8 +11,10 @@ const MenuPage = () => {
         <>  
             <Helmet>
                 <title>Citron Café | Menu</title>
-            </Helmet>
-            <MenuContainer />
+            </Helmet> 
+            <Main class="menu-container">
+                <MenuContainer />
+            </Main>
             <Copyright page="menu-page"/>
         </>
     )

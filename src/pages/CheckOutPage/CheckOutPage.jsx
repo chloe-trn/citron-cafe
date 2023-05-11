@@ -7,6 +7,7 @@ import { BagContext } from '../../App'
 // import css 
 import './check-out.css'
 // import components
+import Main from '../../components/Elements/Main'
 import StripeContainer from './StripeContainer/StripeContainer'
 
 function CheckOutPage() {
@@ -23,9 +24,9 @@ function CheckOutPage() {
         <Helmet>
             <title>Citron Café | Check Out</title>
         </Helmet>
-        <main id='main' className='check-out-container'>
-        <StripeContainer />
-        </main>
+        <Main class="menu-container">
+            <StripeContainer />
+        </Main>
         </>
     )
 }
