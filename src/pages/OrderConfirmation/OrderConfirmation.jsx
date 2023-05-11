@@ -30,7 +30,7 @@ function OrderConfirmation() {
         }
 
         // send a request to add the information to the database
-        fetch("http://localhost:5000/purchase", {
+        fetch("https://citron-server.herokuapp.com/purchase", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

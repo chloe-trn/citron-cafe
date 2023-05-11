@@ -40,7 +40,7 @@ function BagContainer(){
             items: purchaseArray
         }
 
-        fetch("http://localhost:5000/checkout-session", {
+        fetch("https://citron-server.herokuapp.com/checkout-session", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
