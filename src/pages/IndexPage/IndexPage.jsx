@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 // import css
 import './index.css'
 // import components
+import Main from '../../components/Elements/Main'
 import SubHero from './SubHero'
 import Info from './Info'
 import Newsletter from './Newsletter'
@@ -26,12 +27,12 @@ function IndexPage(props){
         <Helmet>
             <title>Citron Café</title>
         </Helmet>
-        <main id='main'>
+        <Main>
            <Hero images={images}/>
            <SubHero img={image6}/>
            <Info />
            <Newsletter />
-        </main>
+        </Main>
         <footer id='index-copyright'>Citron Café 2020</footer>
         </>
     )

@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 // import css
 import './gallery.css'
 // import components
+import Main from '../../components/Elements/Main'
 import GalleryGrid from './GalleryGrid/GalleryGrid'
 import Copyright from '../../components/Copyright'
 // import assets
@@ -23,7 +24,9 @@ function GalleryPage(){
         <Helmet>
             <title>Citron Café | Gallery</title>
         </Helmet>
-        <GalleryGrid images={images} instaLogo={instaLogo}></GalleryGrid>
+        <Main class="gallery-container">
+            <GalleryGrid images={images} instaLogo={instaLogo}></GalleryGrid>
+        </Main>
         <Copyright />
         </>
     )
