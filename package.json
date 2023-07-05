@@ -1,11 +1,11 @@
 {
-  "homepage": "https://chloe-trn.github.io/citron-cafe",
+  "homepage": "",
   "name": "cafe",
   "version": "0.1.0",
   "engines": {
     "node": "14.x"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@stripe/react-stripe-js": "^1.4.0",
     "@stripe/stripe-js": "^1.13.1",
